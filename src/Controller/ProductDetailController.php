@@ -13,6 +13,7 @@ use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations\Get;
 use FOS\RestBundle\Controller\Annotations\View;
 use Symfony\Component\HttpFoundation\Request;
+use App\Exception\NoFoundProductException;
 
 class ProductDetailController extends AbstractFOSRestController
 {
@@ -34,7 +35,9 @@ class ProductDetailController extends AbstractFOSRestController
 
         if($products == null)
         {
-            $products = 'Desoler mais l\'article n\'existe pas!!';
+            $message = 'desoler mais l\'article demandé n\'existe pas';
+
+            throw new NoFoundProductException($message);
         }
 
         return $products;

@@ -11,6 +11,10 @@ fos_rest:
   format_listener:
     rules:
       - { path: '^/', priorities: ['json'], fallback_format: 'json' }
+  exception:
+    enabled: true
+    codes:
+      { App\Exception\NoFoundProductException: 404 }
 #    param_fetcher_listener:  true
 #    allowed_methods_listener:  true
 #    routing_loader: true
