@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PicturesRepository")
@@ -13,21 +14,25 @@ class Pictures
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Serializer\Groups({"detail"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Serializer\Groups({"detail"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=10)
+     * @Serializer\Groups({"detail"})
      */
     private $extension;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Serializer\Groups({"detail"})
      */
     private $description;
 

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9fc8061-4750-4215-8ed0-7da02001ab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductDetailController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Pictures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pictures.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,23 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ProductDetailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="544">
+              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
               <folding>
                 <element signature="e#117#141#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -52,9 +44,10 @@
         <option value="$PROJECT_DIR$/src/Controller/ProductDetail.php" />
         <option value="$PROJECT_DIR$/config/packages/fos_rest.yaml" />
         <option value="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" />
-        <option value="$PROJECT_DIR$/src/Controller/ProductDetailController.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Entity/Products.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Pictures.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ProductDetailController.php" />
       </list>
     </option>
   </component>
@@ -233,12 +226,12 @@
       <workItem from="1582191696950" duration="1494000" />
       <workItem from="1582200923302" duration="11289000" />
       <workItem from="1582234539141" duration="2147000" />
-      <workItem from="1582363462002" duration="1150000" />
+      <workItem from="1582363462002" duration="4496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21929000" />
+    <option name="totallyTimeSpent" value="25275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -296,13 +289,6 @@
     <entry file="file://$PROJECT_DIR$/src/Entity/Characteristics.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Pictures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -344,26 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/src/Configuration/Template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#236#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Controller/Annotations/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#7#259#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -412,16 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProductDetailController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="e#117#141#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/Annotation/Groups.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -429,10 +385,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/src/Configuration/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="68" column="6" lean-forward="true" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
+          <folding>
+            <element signature="e#7#236#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Controller/Annotations/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="e#7#259#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Pictures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        <state relative-caret-position="85">
+          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductDetailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding>
+            <element signature="e#117#141#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

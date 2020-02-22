@@ -8,12 +8,13 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Products;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations\Get;
 use FOS\RestBundle\Controller\Annotations\View;
+use Symfony\Component\HttpFoundation\Request;
 
-class ProductDetailController
+class ProductDetailController extends AbstractFOSRestController
 {
     /**
      * @Get(
@@ -21,13 +22,20 @@ class ProductDetailController
      *     name = "app_product_detail",
      *     requirements = {"id"="\d+"}
      * )
-     * @View(statusCode=201)
+     * @View(
+     *     statusCode=201,
+     *     serializerGroups={"detail"}
+     *     )
      */
-    public function productDetail()
+    public function productDetail(Request $request)
     {
-        $products = new Products();
-        $products->setName('dfdsds');
-        $products->setContent('sfdsfsqfdddsfqsfdqf');
+        $products = $this->getDoctrine()->getRepository(Products::class)
+        ->find($request->get('id'));
+
+        if($products == null)
+        {
+            $products = 'Desoler mais l\'article n\'existe pas!!';
+        }
 
         return $products;
     }
