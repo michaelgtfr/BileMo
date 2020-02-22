@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductsRepository")
@@ -15,26 +16,36 @@ class Products
      * @ORM\Id()
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
+     *
+     * @Serializer\Groups({"detail"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=30)
+     *
+     * @Serializer\Groups({"detail"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Serializer\Groups({"detail"})
      */
     private $content;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Pictures", mappedBy="product", cascade={"persist"})
+     *
+     * @Serializer\Groups({"detail"})
      */
     private $pictures;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Characteristics", mappedBy="product", cascade={"persist"})
+     *
+     * @Serializer\Groups({"detail"})
      */
     private $characteristics;
 
