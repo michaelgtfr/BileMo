@@ -6,9 +6,20 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
+use Hateoas\Configuration\Annotation as Hateoas;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductsRepository")
+ *
+ * @Hateoas\Relation(
+ *      "self",
+ *      href = @Hateoas\Route(
+ *          "app_product_detail",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups="detail")
+ * )
  */
 class Products
 {
@@ -16,36 +27,36 @@ class Products
      * @ORM\Id()
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     *
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=30)
-     *
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     *
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $content;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Pictures", mappedBy="product", cascade={"persist"})
-     *
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $pictures;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Characteristics", mappedBy="product", cascade={"persist"})
-     *
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $characteristics;
 

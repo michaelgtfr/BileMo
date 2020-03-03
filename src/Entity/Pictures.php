@@ -7,6 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PicturesRepository")
+ *
  */
 class Pictures
 {
@@ -15,32 +16,43 @@ class Pictures
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=10)
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $extension;
 
     /**
      * @ORM\Column(type="string", length=100)
      * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
      */
     private $description;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Products", inversedBy="pictures")
      * @ORM\JoinColumn(nullable=false)
+     * @Serializer\Since("1.0")
      */
     private $product;
+
+    /**
+     * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
+     */
+    private $src;
 
     public function getId(): ?int
     {
@@ -91,6 +103,18 @@ class Pictures
     public function setProduct(?Products $product): self
     {
         $this->product = $product;
+
+        return $this;
+    }
+
+    public function getSrc(): ?string
+    {
+        return $this->src;
+    }
+
+    public function setSrc(string $src): self
+    {
+        $this->src = $src;
 
         return $this;
     }
