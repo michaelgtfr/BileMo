@@ -27,21 +27,21 @@ class Products
      * @ORM\Id()
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     * @Serializer\Groups({"detail"})
+     * @Serializer\Groups({"detail", "list"})
      * @Serializer\Since("1.0")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=30)
-     * @Serializer\Groups({"detail"})
+     * @Serializer\Groups({"detail", "list"})
      * @Serializer\Since("1.0")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Serializer\Groups({"detail"})
+     * @Serializer\Groups({"detail", "list"})
      * @Serializer\Since("1.0")
      */
     private $content;
