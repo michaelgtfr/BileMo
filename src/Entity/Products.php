@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Hateoas\Configuration\Annotation as Hateoas;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductsRepository")
@@ -18,8 +19,37 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *          parameters = { "id" = "expr(object.getId())" },
  *          absolute = true
  *      ),
- *     exclusion = @Hateoas\Exclusion(groups="detail")
+ *     exclusion = @Hateoas\Exclusion(groups={"detail"})
  * )
+ *
+ * @Hateoas\Relation(
+ *     "self",
+ *     href= @Hateoas\Route(
+ *     "app_products_list",
+ *     absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"list"})
+ * )
+ *
+ * @Hateoas\Relation(
+ *     "list of products",
+ *     href= @Hateoas\Route(
+ *     "app_products_list",
+ *     absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"detail"})
+ * )
+ *
+ * @Hateoas\Relation(
+ *      "detail product",
+ *      href = @Hateoas\Route(
+ *          "app_product_detail",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"list"})
+ * )
+ *
  */
 class Products
 {
@@ -29,6 +59,7 @@ class Products
      * @ORM\Column(type="integer")
      * @Serializer\Groups({"detail", "list"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("int")
      */
     private $id;
 
@@ -36,6 +67,7 @@ class Products
      * @ORM\Column(type="string", length=30)
      * @Serializer\Groups({"detail", "list"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $name;
 
@@ -43,6 +75,7 @@ class Products
      * @ORM\Column(type="string", length=255)
      * @Serializer\Groups({"detail", "list"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $content;
 
@@ -50,6 +83,7 @@ class Products
      * @ORM\OneToMany(targetEntity="App\Entity\Pictures", mappedBy="product", cascade={"persist"})
      * @Serializer\Groups({"detail"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("object")
      */
     private $pictures;
 
@@ -57,6 +91,7 @@ class Products
      * @ORM\OneToMany(targetEntity="App\Entity\Characteristics", mappedBy="product", cascade={"persist"})
      * @Serializer\Groups({"detail"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("object")
      */
     private $characteristics;
 

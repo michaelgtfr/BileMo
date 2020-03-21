@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
@@ -15,41 +16,50 @@ class Client
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Assert\Type("int")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\Type("string")
      */
     private $business;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\Type("string")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\Type("string")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
+     * @Assert\NotBlank
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Type("string")
      */
     private $address;
 
     /**
      * @ORM\Column(type="string", length=60)
+     * @Assert\Type("string")
      */
     private $country;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
+     * @Assert\Type("object")
      */
     private $users;
 

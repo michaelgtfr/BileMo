@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PicturesRepository")
@@ -17,6 +18,7 @@ class Pictures
      * @ORM\Column(type="integer")
      * @Serializer\Groups({"detail"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("int")
      */
     private $id;
 
@@ -24,6 +26,7 @@ class Pictures
      * @ORM\Column(type="string", length=255)
      * @Serializer\Groups({"detail"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $name;
 
@@ -31,6 +34,7 @@ class Pictures
      * @ORM\Column(type="string", length=10)
      * @Serializer\Groups({"detail"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $extension;
 
@@ -38,6 +42,7 @@ class Pictures
      * @ORM\Column(type="string", length=100)
      * @Serializer\Groups({"detail"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $description;
 
@@ -45,12 +50,14 @@ class Pictures
      * @ORM\ManyToOne(targetEntity="App\Entity\Products", inversedBy="pictures")
      * @ORM\JoinColumn(nullable=false)
      * @Serializer\Since("1.0")
+     * @Assert\Type("object")
      */
     private $product;
 
     /**
      * @Serializer\Groups({"detail"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $src;
 
