@@ -2,3 +2,27 @@ sensio_framework_extra:
     router:
         annotations: false
     view: { annotations: true }
+
+fos_http_cache:
+    cache_control:
+        defaults:
+            overwrite: true
+        rules:
+            -
+                match:
+                    path: ^/product
+                headers:
+                    cache_control:
+                        public: true
+                        s_maxage: 120
+                        max_age : 120
+                    etag : "strong"
+            -
+                match:
+                    path: ^/products
+                headers:
+                    cache_control:
+                        public: true
+                        s_maxage: 120
+                        max_age: 120
+                    etag: "strong"

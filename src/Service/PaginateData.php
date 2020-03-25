@@ -18,7 +18,7 @@ abstract class PaginateData extends ServiceEntityRepository
     public function paginate(QueryBuilder $qb, $limit = 20, $offset = 0)
     {
         if (0 == $limit) {
-            throw new \LogicException('$limit & $offset must be greater than 0.');
+            throw new \LogicException('$limit must be greater than 0.');
         }
 
         $pager = new Pagerfanta(new DoctrineORMAdapter($qb));

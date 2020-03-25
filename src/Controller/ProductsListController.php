@@ -11,7 +11,7 @@ namespace App\Controller;
 
 use App\Entity\Products;
 use App\Exception\NoFoundProductException;
-use FOS\RestBundle\Controller\AbstractFOSRestController;
+use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\Annotations\View;
 use FOS\RestBundle\Request\ParamFetcherInterface;
 use Nelmio\ApiDocBundle\Annotation\Model;
@@ -19,7 +19,7 @@ use Nelmio\ApiDocBundle\Annotation\Security;
 use Swagger\Annotations as SWG;
 use FOS\RestBundle\Controller\Annotations as Rest;
 
-class ProductsListController extends AbstractFOSRestController
+class ProductsListController
 {
     /**
      * @Rest\Get(
@@ -27,7 +27,7 @@ class ProductsListController extends AbstractFOSRestController
      *     name = "app_products_list",
      *)
      * @View(
-     *     statusCode=201,
+     *     statusCode=200,
      *     serializerGroups={"list"}
      * )
      *
@@ -66,19 +66,19 @@ class ProductsListController extends AbstractFOSRestController
      * @SWG\Tag(name="Products")
      * @Security(name="Bearer")
      * @param ParamFetcherInterface $paramFetcher
+     * @param EntityManagerInterface $em
      * @return \App\Representation\Products
      * @throws NoFoundProductException
      */
 
-    public function productsList(ParamFetcherInterface $paramFetcher)
+    public function productsList(ParamFetcherInterface $paramFetcher, EntityManagerInterface $em)
     {
-
-        $pager = $this->getDoctrine()->getRepository(Products::class)->search(
-            $paramFetcher->get('keyword'),
-            $paramFetcher->get('order'),
-            $paramFetcher->get('limit'),
-            $paramFetcher->get('offset')
-        );
+        $pager = $em->getRepository(Products::class)->search(
+                $paramFetcher->get('keyword'),
+                $paramFetcher->get('order'),
+                $paramFetcher->get('limit'),
+                $paramFetcher->get('offset')
+            );
 
         if($pager == null)
         {
