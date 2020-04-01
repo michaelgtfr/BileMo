@@ -39,6 +39,13 @@ class ProductDetailController
      *     )
      * )
      * @SWG\Tag(name="Products")
+     * @SWG\Parameter(
+     *  name="Authorization",
+     *  in="header",
+     *  required=true,
+     *  type="string",
+     *  description="Bearer token",
+     * )
      * @Security(name="Bearer")
      * @param Request $request
      * @param EntityManagerInterface $em

@@ -2,111 +2,40 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
  */
-class Client
+class Client implements UserInterface
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Assert\Type("int")
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
-     * @Assert\Type("string")
-     */
-    private $business;
-
-    /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\Type("string")
-     */
-    private $name;
-
-    /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\Type("string")
-     */
-    private $firstname;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\Email()
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\Type("string")
+     * @ORM\Column(type="json")
      */
-    private $address;
+    private $roles = [];
 
     /**
-     * @ORM\Column(type="string", length=60)
-     * @Assert\Type("string")
+     * @var string The hashed password
+     * @ORM\Column(type="string")
      */
-    private $country;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
-     * @Assert\Type("object")
-     */
-    private $users;
-
-    public function __construct()
-    {
-        $this->users = new ArrayCollection();
-    }
+    private $password;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getBusiness(): ?string
-    {
-        return $this->business;
-    }
-
-    public function setBusiness(string $business): self
-    {
-        $this->business = $business;
-
-        return $this;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    public function getFirstname(): ?string
-    {
-        return $this->firstname;
-    }
-
-    public function setFirstname(string $firstname): self
-    {
-        $this->firstname = $firstname;
-
-        return $this;
     }
 
     public function getEmail(): ?string
@@ -121,58 +50,64 @@ class Client
         return $this;
     }
 
-    public function getAddress(): ?string
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
     {
-        return $this->address;
+        return (string) $this->email;
     }
 
-    public function setAddress(string $address): self
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
     {
-        $this->address = $address;
+        $roles[] = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
 
-        return $this;
+        return array_unique($roles);
     }
 
-    public function getCountry(): ?string
+    public function setRoles(array $roles): self
     {
-        return $this->country;
-    }
-
-    public function setCountry(string $country): self
-    {
-        $this->country = $country;
+        $this->roles = $roles;
 
         return $this;
     }
 
     /**
-     * @return Collection|User[]
+     * @see UserInterface
      */
-    public function getUsers(): Collection
+    public function getPassword(): string
     {
-        return $this->users;
+        return (string) $this->password;
     }
 
-    public function addUser(User $user): self
+    public function setPassword(string $password): self
     {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
-            $user->setClient($this);
-        }
+        $this->password = $password;
 
         return $this;
     }
 
-    public function removeUser(User $user): self
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
     {
-        if ($this->users->contains($user)) {
-            $this->users->removeElement($user);
-            // set the owning side to null (unless already changed)
-            if ($user->getClient() === $this) {
-                $user->setClient(null);
-            }
-        }
+        // not needed when using the "bcrypt" algorithm in security.yaml
+    }
 
-        return $this;
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 }

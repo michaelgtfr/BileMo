@@ -23,7 +23,7 @@ class ProductsListController
 {
     /**
      * @Rest\Get(
-     *     path = "/products",
+     *     path = "/api/products",
      *     name = "app_products_list",
      *)
      * @View(
@@ -64,6 +64,13 @@ class ProductsListController
      *     description="The pagination offset"
      * )
      * @SWG\Tag(name="Products")
+     * @SWG\Parameter(
+     *  name="Authorization",
+     *  in="header",
+     *  required=true,
+     *  type="string",
+     *  description="Bearer token",
+     * )
      * @Security(name="Bearer")
      * @param ParamFetcherInterface $paramFetcher
      * @param EntityManagerInterface $em

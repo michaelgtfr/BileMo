@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="user")
  */
 class User
 {
@@ -16,14 +17,7 @@ class User
      * @ORM\Column(type="integer")
      * @Assert\Type("string")
      */
-    private $id;
-
-    /**
-     * @ORM\Column(type="string", length=60)
-     * @Assert\Email()
-     * @Assert\NotBlank
-     */
-    private $email;
+    protected $id;
 
     /**
      * @ORM\Column(type="string", length=60)
@@ -56,21 +50,10 @@ class User
      */
     private $client;
 
+
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): self
-    {
-        $this->email = $email;
-
-        return $this;
     }
 
     public function getCountry(): ?string
