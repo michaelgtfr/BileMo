@@ -68,6 +68,7 @@ class ProductsListController
      *  name="Authorization",
      *  in="header",
      *  required=true,
+     *  default="BEARER TOKEN",
      *  type="string",
      *  description="Bearer token",
      * )

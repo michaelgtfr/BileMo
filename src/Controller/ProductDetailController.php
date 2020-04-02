@@ -22,7 +22,7 @@ class ProductDetailController
 {
     /**
      * @Rest\Get(
-     *     path = "/product/{id}",
+     *     path = "api/product/{id}",
      *     name = "app_product_detail",
      *     requirements = {"id"="\d+"}
      * )
@@ -43,6 +43,7 @@ class ProductDetailController
      *  name="Authorization",
      *  in="header",
      *  required=true,
+     *  default="BEARER TOKEN",
      *  type="string",
      *  description="Bearer token",
      * )

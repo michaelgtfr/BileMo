@@ -46,10 +46,8 @@ class User
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
-     * @Assert\Type("object")
      */
     private $client;
-
 
     public function getId(): ?int
     {
