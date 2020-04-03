@@ -19,11 +19,13 @@ class UserRepository extends PaginateData
         parent::__construct($registry, User::class);
     }
 
-    public function search($term, $order = 'asc', $limit = 20, $offset = 0)
+    public function searchListByClient($term, $order = 'asc', $limit = 20, $offset = 0, $client)
     {
         $qb = $this->createQueryBuilder('u')
             ->select('u')
-            ->orderBy('u.id', $order);
+            ->orderBy('u.id', $order)
+            ->where('u.client = ?2')
+            ->setParameter(2, $client);
 
 
         if ($term) {

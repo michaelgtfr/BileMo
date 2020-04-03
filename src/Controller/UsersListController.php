@@ -8,7 +8,6 @@
 
 namespace App\Controller;
 
-
 use App\Entity\User;
 use App\Exception\NoFoundAppException;
 use Doctrine\ORM\EntityManagerInterface;
@@ -18,6 +17,7 @@ use Nelmio\ApiDocBundle\Annotation\Model;
 use Nelmio\ApiDocBundle\Annotation\Security;
 use Swagger\Annotations as SWG;
 use FOS\RestBundle\Controller\Annotations as Rest;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class UsersListController
 {
@@ -75,16 +75,18 @@ class UsersListController
      * @Security(name="Bearer")
      * @param ParamFetcherInterface $paramFetcher
      * @param EntityManagerInterface $em
+     * @param UserInterface $client
      * @return \App\Representation\Users
      * @throws NoFoundAppException
      */
-    public function usersList(ParamFetcherInterface $paramFetcher, EntityManagerInterface $em)
+    public function usersList(ParamFetcherInterface $paramFetcher, EntityManagerInterface $em, UserInterface $client)
     {
-        $pager = $em->getRepository(User::class)->search(
+        $pager = $em->getRepository(User::class)->searchListByClient(
             $paramFetcher->get('keyword'),
             $paramFetcher->get('order'),
             $paramFetcher->get('limit'),
-            $paramFetcher->get('offset')
+            $paramFetcher->get('offset'),
+            $client->getId()
         );
 
         if($pager == null)
