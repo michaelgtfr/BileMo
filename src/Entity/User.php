@@ -13,8 +13,9 @@ use Hateoas\Configuration\Annotation as Hateoas;
  * @Hateoas\Relation(
  *     "authenticated_user",
  *     embedded = @Hateoas\Embedded("expr(service('security.token_storage').getToken().getUser())"),
- *     exclusion = @Hateoas\Exclusion(groups={"listUsers"})
+ *     exclusion = @Hateoas\Exclusion(groups={"listUsers", "detailUser"})
  * )
+ *
  * @Hateoas\Relation(
  *      "self",
  *      href = @Hateoas\Route(
@@ -23,6 +24,36 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"listUsers"})
  * )
+ *
+ * @Hateoas\Relation(
+ *      "detail of user",
+ *      href = @Hateoas\Route(
+ *          "app_user_detail",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"listUsers"})
+ * )
+ *
+ * @Hateoas\Relation(
+ *      "self",
+ *      href = @Hateoas\Route(
+ *          "app_user_detail",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"detailUser"})
+ * )
+ *
+ * @Hateoas\Relation(
+ *      "list of users",
+ *      href = @Hateoas\Route(
+ *          "app_users_list",
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"detailUser"})
+ * )
+ *
  */
 class User
 {
