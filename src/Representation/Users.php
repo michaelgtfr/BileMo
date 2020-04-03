@@ -2,26 +2,27 @@
 /**
  * Created by PhpStorm.
  * User: mickd
- * Date: 06/03/2020
- * Time: 17:13
+ * Date: 03/04/2020
+ * Time: 11:13
  */
 
 namespace App\Representation;
+
 
 use JMS\Serializer\Annotation\Type;
 use Pagerfanta\Pagerfanta;
 use JMS\Serializer\Annotation as Serializer;
 
-class Products
+class Users
 {
     /**
-     * @Type("array<App\Entity\Products>")
-     * @Serializer\Groups("list")
+     * @Type("array<App\Entity\User>")
+     * @Serializer\Groups("listUsers")
      */
     public $data;
 
     /**
-     * @Serializer\Groups("list")
+     * @Serializer\Groups("listUsers")
      */
     public $meta;
 

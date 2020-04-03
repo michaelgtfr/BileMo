@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
@@ -16,16 +17,22 @@ class Client implements UserInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
      */
     private $email;
 
     /**
      * @ORM\Column(type="json")
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
      */
     private $roles = [];
 
@@ -40,9 +47,43 @@ class Client implements UserInterface
      */
     private $users;
 
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
+     */
+    private $business;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
+     */
+    private $firstname;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
+     */
+    private $address;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Serializer\Groups({"detail", "list", "listUsers"})
+     * @Serializer\Since("1.0")
+     */
+    private $country;
+
     public function __construct()
     {
-        $this->yes = new ArrayCollection();
         $this->users = new ArrayCollection();
     }
 
@@ -151,6 +192,66 @@ class Client implements UserInterface
                 $user->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getBusiness(): ?string
+    {
+        return $this->business;
+    }
+
+    public function setBusiness(?string $business): self
+    {
+        $this->business = $business;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(string $address): self
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    public function getCountry(): ?string
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?string $country): self
+    {
+        $this->country = $country;
 
         return $this;
     }

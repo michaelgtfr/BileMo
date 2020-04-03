@@ -4,10 +4,25 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation as Serializer;
+use Hateoas\Configuration\Annotation as Hateoas;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table(name="user")
+ *
+ * @Hateoas\Relation(
+ *     "authenticated_user",
+ *     embedded = @Hateoas\Embedded("expr(service('security.token_storage').getToken().getUser())"),
+ *     exclusion = @Hateoas\Exclusion(groups={"listUsers"})
+ * )
+ * @Hateoas\Relation(
+ *      "self",
+ *      href = @Hateoas\Route(
+ *          "app_users_list",
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"listUsers"})
+ * )
  */
 class User
 {
@@ -16,30 +31,38 @@ class User
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      * @Assert\Type("string")
+     * @Serializer\Groups({"listUsers"})
+     * @Serializer\Since("1.0")
      */
     protected $id;
 
     /**
      * @ORM\Column(type="string", length=60)
      * @Assert\Type("string")
+     * @Serializer\Since("1.0")
      */
     private $country;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Type("string")
+     * @Serializer\Since("1.0")
      */
     private $address;
 
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\Type("string")
+     * @Serializer\Groups({"listUsers"})
+     * @Serializer\Since("1.0")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\Type("string")
+     * @Serializer\Groups({"listUsers"})
+     * @Serializer\Since("1.0")
      */
     private $firstname;
 

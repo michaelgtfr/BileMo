@@ -2,15 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: mickd
- * Date: 04/03/2020
- * Time: 20:29
+ * Date: 03/04/2020
+ * Time: 11:00
  */
 
 namespace App\Controller;
 
 
-use App\Entity\Products;
-use App\Exception\NoFoundProductException;
+use App\Entity\User;
+use App\Exception\NoFoundAppException;
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\Annotations\View;
 use FOS\RestBundle\Request\ParamFetcherInterface;
@@ -19,24 +19,24 @@ use Nelmio\ApiDocBundle\Annotation\Security;
 use Swagger\Annotations as SWG;
 use FOS\RestBundle\Controller\Annotations as Rest;
 
-class ProductsListController
+class UsersListController
 {
+
     /**
      * @Rest\Get(
-     *     path = "/api/products",
-     *     name = "app_products_list",
+     *     path = "/api/users",
+     *     name = "app_users_list",
      *)
      * @View(
      *     statusCode=200,
-     *     serializerGroups={"list"}
+     *     serializerGroups={"listUsers"}
      * )
-     *
      * @SWG\Response(
      *     response=200,
-     *     description="Get list of Products.",
+     *     description="Get list my users.",
      *     @SWG\Schema(
      *         type="array",
-     *         @SWG\Items(ref=@Model(type=Products::class, groups={"list"}))
+     *         @SWG\Items(ref=@Model(type=User::class, groups={"listUsers"}))
      *     )
      * )
      * @Rest\QueryParam(
@@ -63,7 +63,7 @@ class ProductsListController
      *     default="0",
      *     description="The pagination offset"
      * )
-     * @SWG\Tag(name="Products")
+     * @SWG\Tag(name="listUsers")
      * @SWG\Parameter(
      *  name="Authorization",
      *  in="header",
@@ -75,26 +75,25 @@ class ProductsListController
      * @Security(name="Bearer")
      * @param ParamFetcherInterface $paramFetcher
      * @param EntityManagerInterface $em
-     * @return \App\Representation\Products
-     * @throws NoFoundProductException
+     * @return \App\Representation\Users
+     * @throws NoFoundAppException
      */
-
-    public function productsList(ParamFetcherInterface $paramFetcher, EntityManagerInterface $em)
+    public function usersList(ParamFetcherInterface $paramFetcher, EntityManagerInterface $em)
     {
-        $pager = $em->getRepository(Products::class)->search(
-                $paramFetcher->get('keyword'),
-                $paramFetcher->get('order'),
-                $paramFetcher->get('limit'),
-                $paramFetcher->get('offset')
-            );
+        $pager = $em->getRepository(User::class)->search(
+            $paramFetcher->get('keyword'),
+            $paramFetcher->get('order'),
+            $paramFetcher->get('limit'),
+            $paramFetcher->get('offset')
+        );
 
         if($pager == null)
         {
             $message = 'desoler mais il n\'y a pas d\'article';
 
-            throw new NoFoundProductException($message);
+            throw new NoFoundAppException($message);
         }
 
-        return new \App\Representation\Products($pager);
+        return new \App\Representation\Users($pager);
     }
 }

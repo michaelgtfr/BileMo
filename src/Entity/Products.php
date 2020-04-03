@@ -50,6 +50,11 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     exclusion = @Hateoas\Exclusion(groups={"list"})
  * )
  *
+ * @Hateoas\Relation(
+ *     "authenticated_user",
+ *     embedded = @Hateoas\Embedded("expr(service('security.token_storage').getToken().getUser())"),
+ *     exclusion = @Hateoas\Exclusion(groups={"detail", "list"})
+ * )
  */
 class Products
 {
