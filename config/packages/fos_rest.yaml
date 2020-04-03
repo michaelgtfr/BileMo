@@ -20,7 +20,7 @@ fos_rest:
   exception:
     enabled: true
     codes:
-      { App\Exception\NoFoundProductException: 404 }
+      { App\Exception\NoFoundAppException: 404 }
   versioning:
     enabled: true
     resolvers:

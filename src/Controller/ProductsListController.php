@@ -10,7 +10,7 @@ namespace App\Controller;
 
 
 use App\Entity\Products;
-use App\Exception\NoFoundProductException;
+use App\Exception\NoFoundAppException;
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\Annotations\View;
 use FOS\RestBundle\Request\ParamFetcherInterface;
@@ -76,7 +76,7 @@ class ProductsListController
      * @param ParamFetcherInterface $paramFetcher
      * @param EntityManagerInterface $em
      * @return \App\Representation\Products
-     * @throws NoFoundProductException
+     * @throws NoFoundAppException
      */
 
     public function productsList(ParamFetcherInterface $paramFetcher, EntityManagerInterface $em)
@@ -92,7 +92,7 @@ class ProductsListController
         {
             $message = 'desoler mais il n\'y a pas d\'article';
 
-            throw new NoFoundProductException($message);
+            throw new NoFoundAppException($message);
         }
 
         return new \App\Representation\Products($pager);
