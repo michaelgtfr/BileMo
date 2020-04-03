@@ -91,7 +91,7 @@ class UsersListController
 
         if($pager == null)
         {
-            $message = 'desoler mais il n\'y a pas d\'article';
+            $message = 'desoler mais vous n\'avez pas d\'utilisateur enregistrer dans la base de données;
 
             throw new NoFoundAppException($message);
         }
