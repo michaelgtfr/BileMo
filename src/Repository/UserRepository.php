@@ -36,4 +36,15 @@ class UserRepository extends PaginateData
 
         return $this->paginate($qb, $limit, $offset);
     }
+
+    public function detailUserOfClient($id, $client)
+    {
+        return $qb = $this->createQueryBuilder('u')
+                ->select('u')
+                ->where('u.id = ?1')
+                ->andWhere('u.client = ?2')
+                ->setParameters(array(1 => $id, 2 => $client))
+                ->getQuery()
+                ->getResult();
+    }
 }

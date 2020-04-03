@@ -21,7 +21,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 class UsersListController
 {
-
     /**
      * @Rest\Get(
      *     path = "/api/users",
@@ -63,7 +62,7 @@ class UsersListController
      *     default="0",
      *     description="The pagination offset"
      * )
-     * @SWG\Tag(name="listUsers")
+     * @SWG\Tag(name="Users")
      * @SWG\Parameter(
      *  name="Authorization",
      *  in="header",

@@ -2,43 +2,44 @@
 /**
  * Created by PhpStorm.
  * User: mickd
- * Date: 20/02/2020
- * Time: 20:50
+ * Date: 03/04/2020
+ * Time: 17:31
  */
 
 namespace App\Controller;
 
-use App\Entity\Products;
+
+use App\Entity\User;
 use App\Exception\NoFoundAppException;
-use App\Service\PictureSrc;
 use Doctrine\ORM\EntityManagerInterface;
-use FOS\RestBundle\Controller\Annotations as Rest;
 use Nelmio\ApiDocBundle\Annotation\Model;
 use Nelmio\ApiDocBundle\Annotation\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Swagger\Annotations as SWG;
+use FOS\RestBundle\Controller\Annotations as Rest;
+use Symfony\Component\Security\Core\User\UserInterface;
 
-class ProductDetailController
+class UserDetailController
 {
     /**
      * @Rest\Get(
-     *     path = "api/product/{id}",
-     *     name = "app_product_detail",
+     *     path = "api/user/{id}",
+     *     name = "app_user_detail",
      *     requirements = {"id"="\d+"}
      * )
      * @Rest\View(
      *     statusCode=200,
-     *     serializerGroups={"detail"}
+     *     serializerGroups={"detailUser"}
      * )
      * @SWG\Response(
      *     response=200,
-     *     description="Get the details an article.",
+     *     description="Get the details an user.",
      *     @SWG\Schema(
      *         type="array",
-     *         @SWG\Items(ref=@Model(type=Products::class, groups={"detail"}))
+     *         @SWG\Items(ref=@Model(type=User::class, groups={"detailUser"}))
      *     )
      * )
-     * @SWG\Tag(name="Products")
+     * @SWG\Tag(name="Users")
      * @SWG\Parameter(
      *  name="Authorization",
      *  in="header",
@@ -50,23 +51,20 @@ class ProductDetailController
      * @Security(name="Bearer")
      * @param Request $request
      * @param EntityManagerInterface $em
+     * @param UserInterface $client
      * @return object|null
      * @throws NoFoundAppException
      */
-    public function productDetail(Request $request, EntityManagerInterface $em)
+    public function userDetail(Request $request, EntityManagerInterface $em, UserInterface $client)
     {
-        //recovery of details of the article
-        $product = $em->getRepository(Products::class)
-        ->find($request->get('id'));
+        $user = $em->getRepository(User::class)
+            ->detailUserOfClient($request->get('id'), $client->getId());
 
-        if ($product == null) {
-            $message = 'desoler mais l\'article demandé n\'existe pas';
+        if ($user == null) {
+            $message = 'Desoler mais l\'utilisateur demandé n\'existe pas';
             throw new NoFoundAppException($message);
         }
 
-        //modification of the src attribute
-        (new PictureSrc($request))->pictureSrc($product->getPictures());
-
-        return $product;
+        return $user;
     }
 }

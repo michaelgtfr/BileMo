@@ -31,7 +31,7 @@ class User
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      * @Assert\Type("string")
-     * @Serializer\Groups({"listUsers"})
+     * @Serializer\Groups({"listUsers", "detailUser"})
      * @Serializer\Since("1.0")
      */
     protected $id;
@@ -39,6 +39,7 @@ class User
     /**
      * @ORM\Column(type="string", length=60)
      * @Assert\Type("string")
+     * @Serializer\Groups({"detailUser"})
      * @Serializer\Since("1.0")
      */
     private $country;
@@ -46,6 +47,7 @@ class User
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Type("string")
+     * @Serializer\Groups({"detailUser"})
      * @Serializer\Since("1.0")
      */
     private $address;
@@ -53,7 +55,7 @@ class User
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\Type("string")
-     * @Serializer\Groups({"listUsers"})
+     * @Serializer\Groups({"listUsers", "detailUser"})
      * @Serializer\Since("1.0")
      */
     private $name;
@@ -61,7 +63,7 @@ class User
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\Type("string")
-     * @Serializer\Groups({"listUsers"})
+     * @Serializer\Groups({"listUsers", "detailUser"})
      * @Serializer\Since("1.0")
      */
     private $firstname;
