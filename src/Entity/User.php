@@ -54,6 +54,15 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *     exclusion = @Hateoas\Exclusion(groups={"detailUser"})
  * )
  *
+ * @Hateoas\Relation(
+ *      "create new user",
+ *      href = @Hateoas\Route(
+ *          "app_user_create",
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers"})
+ * )
+ *
  */
 class User
 {
@@ -61,7 +70,7 @@ class User
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Assert\Type("string")
+     * @Assert\Type("integer")
      * @Serializer\Groups({"listUsers", "detailUser"})
      * @Serializer\Since("1.0")
      */
