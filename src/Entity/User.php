@@ -13,7 +13,7 @@ use Hateoas\Configuration\Annotation as Hateoas;
  * @Hateoas\Relation(
  *     "authenticated_user",
  *     embedded = @Hateoas\Embedded("expr(service('security.token_storage').getToken().getUser())"),
- *     exclusion = @Hateoas\Exclusion(groups={"listUsers", "detailUser"})
+ *     exclusion = @Hateoas\Exclusion(groups={"listUsers", "detailUser", "deleteUser"})
  * )
  *
  * @Hateoas\Relation(
@@ -51,7 +51,7 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *          "app_users_list",
  *          absolute = true
  *      ),
- *     exclusion = @Hateoas\Exclusion(groups={"detailUser"})
+ *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "deleteUser"})
  * )
  *
  * @Hateoas\Relation(
@@ -60,7 +60,7 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *          "app_user_create",
  *          absolute = true
  *      ),
- *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers"})
+ *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers", "deleteUser"})
  * )
  *
  */
@@ -79,7 +79,7 @@ class User
     /**
      * @ORM\Column(type="string", length=60)
      * @Assert\Type("string")
-     * @Serializer\Groups({"detailUser"})
+     * @Serializer\Groups({"detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $country;
@@ -87,7 +87,7 @@ class User
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Type("string")
-     * @Serializer\Groups({"detailUser"})
+     * @Serializer\Groups({"detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $address;
@@ -95,7 +95,7 @@ class User
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\Type("string")
-     * @Serializer\Groups({"listUsers", "detailUser"})
+     * @Serializer\Groups({"listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $name;
@@ -103,7 +103,7 @@ class User
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\Type("string")
-     * @Serializer\Groups({"listUsers", "detailUser"})
+     * @Serializer\Groups({"listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $firstname;

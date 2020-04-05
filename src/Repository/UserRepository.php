@@ -45,6 +45,6 @@ class UserRepository extends PaginateData
                 ->andWhere('u.client = ?2')
                 ->setParameters(array(1 => $id, 2 => $client))
                 ->getQuery()
-                ->getResult();
+                ->getSingleResult();
     }
 }

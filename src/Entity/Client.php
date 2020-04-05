@@ -17,21 +17,21 @@ class Client implements UserInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $email;
 
     /**
      * @ORM\Column(type="json")
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $roles = [];
@@ -49,35 +49,35 @@ class Client implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $business;
 
     /**
      * @ORM\Column(type="string", length=50)
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=50)
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $address;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser"})
+     * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
      */
     private $country;
