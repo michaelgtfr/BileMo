@@ -4,6 +4,7 @@
     <list default="true" id="e9fc8061-4750-4215-8ed0-7da02001ab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +32,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="323">
+              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+              <folding>
+                <element signature="e#30#78#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,12 +96,12 @@
         <option value="$PROJECT_DIR$/src/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/UserDeleteController.php" />
         <option value="$PROJECT_DIR$/src/Representation/MessageOfDeleteUser.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Client.php" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Entity/Products.php" />
         <option value="$PROJECT_DIR$/src/Entity/Pictures.php" />
         <option value="$PROJECT_DIR$/src/Entity/Characteristics.php" />
         <option value="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" />
+        <option value="$PROJECT_DIR$/src/Entity/Client.php" />
       </list>
     </option>
   </component>
@@ -276,6 +280,12 @@
             </path>
             <path>
               <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
@@ -384,12 +394,12 @@
       <workItem from="1586014566429" duration="3315000" />
       <workItem from="1586067841994" duration="6457000" />
       <workItem from="1586091894529" duration="3584000" />
-      <workItem from="1586142319812" duration="1913000" />
+      <workItem from="1586142319812" duration="3610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342745000" />
+    <option name="totallyTimeSpent" value="344442000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -786,16 +796,6 @@
     <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/validator/Constraint.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2819">
@@ -876,8 +876,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="646">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

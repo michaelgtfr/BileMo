@@ -39,9 +39,9 @@ fos_http_cache:
             -
                 match:
                     path: ^/api/users
-                    headers:
-                        cache_control:
-                            public: true
-                            s_maxage: 1800
-                            max_age: 1800
-                        etag: "strong"
+                headers:
+                    cache_control:
+                        public: true
+                        s_maxage: 1800
+                        max_age: 1800
+                    etag: "strong"

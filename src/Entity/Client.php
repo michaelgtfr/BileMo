@@ -32,6 +32,7 @@ class Client implements UserInterface
      *     message = "The email '{{ value }}' is not a valid email."
      * )
      * @Assert\Unique
+     * @Assert\NotBlank
      */
     private $email;
 
@@ -39,7 +40,7 @@ class Client implements UserInterface
      * @ORM\Column(type="json")
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
-     * @Assert\Type("array)
+     * @Assert\Json()
      */
     private $roles = [];
 
