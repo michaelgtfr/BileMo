@@ -11,19 +11,37 @@ fos_http_cache:
         rules:
             -
                 match:
-                    path: ^/product
+                    path: ^/api/product
                 headers:
                     cache_control:
                         public: true
-                        s_maxage: 120
-                        max_age : 120
+                        s_maxage: 3600
+                        max_age : 3600
                     etag : "strong"
             -
                 match:
-                    path: ^/products
+                    path: ^/api/products
                 headers:
                     cache_control:
                         public: true
-                        s_maxage: 120
-                        max_age: 120
+                        s_maxage: 1800
+                        max_age: 1800
                     etag: "strong"
+            -
+                match:
+                    path: ^/api/user
+                headers:
+                    cache_control:
+                        public: true
+                        s_maxage: 3600
+                        max_age: 3600
+                    etag: "strong"
+            -
+                match:
+                    path: ^/api/users
+                    headers:
+                        cache_control:
+                            public: true
+                            s_maxage: 1800
+                            max_age: 1800
+                        etag: "strong"
