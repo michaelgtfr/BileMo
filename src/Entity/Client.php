@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use JMS\Serializer\Annotation as Serializer;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
@@ -19,6 +20,7 @@ class Client implements UserInterface
      * @ORM\Column(type="integer")
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("int")
      */
     private $id;
 
@@ -26,6 +28,10 @@ class Client implements UserInterface
      * @ORM\Column(type="string", length=180, unique=true)
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email."
+     * )
+     * @Assert\Unique
      */
     private $email;
 
@@ -33,17 +39,20 @@ class Client implements UserInterface
      * @ORM\Column(type="json")
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("array)
      */
     private $roles = [];
 
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Assert\Type("string")
      */
     private $password;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
+     * @Assert\Type("object")
      */
     private $users;
 
@@ -51,6 +60,7 @@ class Client implements UserInterface
      * @ORM\Column(type="string", length=100, nullable=true)
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $business;
 
@@ -58,6 +68,7 @@ class Client implements UserInterface
      * @ORM\Column(type="string", length=50)
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $name;
 
@@ -65,6 +76,7 @@ class Client implements UserInterface
      * @ORM\Column(type="string", length=50)
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $firstname;
 
@@ -72,6 +84,7 @@ class Client implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $address;
 
@@ -79,6 +92,7 @@ class Client implements UserInterface
      * @ORM\Column(type="string", length=255)
      * @Serializer\Groups({"detail", "list", "listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $country;
 
@@ -203,7 +217,7 @@ class Client implements UserInterface
 
     public function setBusiness(?string $business): self
     {
-        $this->business = $business;
+        $this->business = filter_var($business, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -215,7 +229,7 @@ class Client implements UserInterface
 
     public function setName(string $name): self
     {
-        $this->name = $name;
+        $this->name = filter_var($name, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -227,7 +241,7 @@ class Client implements UserInterface
 
     public function setFirstname(string $firstname): self
     {
-        $this->firstname = $firstname;
+        $this->firstname = filter_var($firstname, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -239,7 +253,7 @@ class Client implements UserInterface
 
     public function setAddress(string $address): self
     {
-        $this->address = $address;
+        $this->address = filter_var($address, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -251,7 +265,7 @@ class Client implements UserInterface
 
     public function setCountry(?string $country): self
     {
-        $this->country = $country;
+        $this->country = filter_var($country, FILTER_SANITIZE_STRING);
 
         return $this;
     }

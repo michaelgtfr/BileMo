@@ -58,7 +58,7 @@ class Characteristics
 
     public function setDesignation(string $designation): self
     {
-        $this->designation = $designation;
+        $this->designation = filter_var($designation, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -70,7 +70,7 @@ class Characteristics
 
     public function setValue(string $value): self
     {
-        $this->value = $value;
+        $this->value = filter_var($value, FILTER_SANITIZE_STRING);
 
         return $this;
     }

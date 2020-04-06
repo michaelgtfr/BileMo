@@ -73,7 +73,7 @@ class Pictures
 
     public function setName(string $name): self
     {
-        $this->name = $name;
+        $this->name = filter_var($name, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -85,7 +85,7 @@ class Pictures
 
     public function setExtension(string $extension): self
     {
-        $this->extension = $extension;
+        $this->extension = filter_var($extension, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -97,7 +97,7 @@ class Pictures
 
     public function setDescription(string $description): self
     {
-        $this->description = $description;
+        $this->description = filter_var($description, FILTER_SANITIZE_STRING);
 
         return $this;
     }

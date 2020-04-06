@@ -73,6 +73,7 @@ class User
      * @Assert\Type("integer")
      * @Serializer\Groups({"listUsers", "detailUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("int")
      */
     protected $id;
 
@@ -81,6 +82,7 @@ class User
      * @Assert\Type("string")
      * @Serializer\Groups({"detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $country;
 
@@ -89,6 +91,7 @@ class User
      * @Assert\Type("string")
      * @Serializer\Groups({"detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $address;
 
@@ -97,6 +100,7 @@ class User
      * @Assert\Type("string")
      * @Serializer\Groups({"listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $name;
 
@@ -105,12 +109,14 @@ class User
      * @Assert\Type("string")
      * @Serializer\Groups({"listUsers", "detailUser", "deleteUser"})
      * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $firstname;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\Type("object")
      */
     private $client;
 
@@ -126,7 +132,7 @@ class User
 
     public function setCountry(string $country): self
     {
-        $this->country = $country;
+        $this->country = filter_var($country, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -138,7 +144,7 @@ class User
 
     public function setAddress(string $address): self
     {
-        $this->address = $address;
+        $this->address = filter_var($address, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -150,7 +156,7 @@ class User
 
     public function setName(string $name): self
     {
-        $this->name = $name;
+        $this->name = filter_var($name, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -162,7 +168,7 @@ class User
 
     public function setFirstname(string $firstname): self
     {
-        $this->firstname = $firstname;
+        $this->firstname = filter_var($firstname, FILTER_SANITIZE_STRING);
 
         return $this;
     }

@@ -118,7 +118,7 @@ class Products
 
     public function setName(string $name): self
     {
-        $this->name = $name;
+        $this->name = filter_var($name, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -130,7 +130,7 @@ class Products
 
     public function setContent(string $content): self
     {
-        $this->content = $content;
+        $this->content = filter_var($content, FILTER_SANITIZE_STRING);
 
         return $this;
     }
