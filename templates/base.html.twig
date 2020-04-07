@@ -6,9 +6,16 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
               crossorigin="anonymous">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+    <header>
+        <nav class="navbar navbar-dark">
+            <a class="navnav navbar-brand" href="{{ path('app_homepage') }}">BileMo API</a>
+        </nav>
+    </header>
         {% block body %}{% endblock %}
         <!-- Bootstrap core JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

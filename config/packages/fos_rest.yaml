@@ -16,7 +16,8 @@ fos_rest:
     rules:
       - { path: '^/login', priorities: ['html'], fallback_format: 'html' }
       - { path: '^/admin', priorities: ['html'], fallback_format: 'html' }
-      - { path: '^/', priorities: ['json'], fallback_format: 'json' }
+      - { path: '^/api', priorities: ['json'], fallback_format: 'json' }
+      - { path: '^/', priorities: ['html'], fallback_format: 'html' }
   exception:
     enabled: true
     codes:

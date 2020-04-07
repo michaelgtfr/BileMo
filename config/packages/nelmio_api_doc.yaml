@@ -14,3 +14,6 @@ nelmio_api_doc:
         in: header
     security:
       - Bearer: []
+  areas:
+    default:
+      path_patterns: [ ^/api ]

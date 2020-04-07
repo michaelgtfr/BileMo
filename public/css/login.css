@@ -1,9 +1,14 @@
-body
+/*form of login*/
+
+.form
 {
-    background-color: #1b1b1b;
+    max-width: 500px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1.1rem;
 }
 
-section
+.btn
 {
-    padding-top: 100px;
+    color: white;
+    background-color: #137752;
 }

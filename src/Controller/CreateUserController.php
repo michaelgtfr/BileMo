@@ -70,6 +70,13 @@ class CreateUserController
      *     description="Search query to look for articles"
      * )
      *
+     * @RequestParam(
+     *     name="email",
+     *     requirements="[a-zA-Z0-9]",
+     *     default=null,
+     *     description="Email of User"
+     * )
+     *
      * @SWG\Tag(name="Users")
      * @SWG\Parameter(
      *  name="Authorization",
@@ -87,11 +94,13 @@ class CreateUserController
      * @param UserInterface $client
      * @param UrlGeneratorInterface $generatorURL
      * @return View
+     * @throws \Exception
      */
     public function createUser(User $user, EntityManagerInterface $em, UserInterface $client,
                                UrlGeneratorInterface $generatorURL)
     {
         $user->setClient($client);
+        $user->setDateCreate(new \DateTime());
         $em->persist($user);
         $em->flush();
 

@@ -117,8 +117,28 @@ class User
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
      * @Assert\Type("object")
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email."
+     * )
+     * @Assert\NotBlank
      */
     private $client;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Serializer\Groups({"listUsers", "detailUser", "deleteUser"})
+     * @Serializer\Since("1.0")
+     * @Assert\Type("string")
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @Serializer\Groups({"detailUser", "deleteUser"})
+     * @Serializer\Since("1.0")
+     * @Assert\DateTime
+     */
+    private $dateCreate;
 
     public function getId(): ?int
     {
@@ -181,6 +201,30 @@ class User
     public function setClient(?Client $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getDateCreate(): ?\DateTimeInterface
+    {
+        return $this->dateCreate;
+    }
+
+    public function setDateCreate(?\DateTimeInterface $dateCreate): self
+    {
+        $this->dateCreate = $dateCreate;
 
         return $this;
     }
