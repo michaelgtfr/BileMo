@@ -118,6 +118,7 @@ class Products
 
     public function setName(string $name): self
     {
+        //Protection against the faults XSS
         $this->name = filter_var($name, FILTER_SANITIZE_STRING);
 
         return $this;

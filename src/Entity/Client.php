@@ -218,6 +218,7 @@ class Client implements UserInterface
 
     public function setBusiness(?string $business): self
     {
+        //Protection against the faults XSS
         $this->business = filter_var($business, FILTER_SANITIZE_STRING);
 
         return $this;

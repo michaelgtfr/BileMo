@@ -21,6 +21,8 @@ use Swagger\Annotations as SWG;
 class ProductDetailController
 {
     /**
+     * allows the customer to retrieve the detail of a product.
+     *
      * @Rest\Get(
      *     path = "api/product/{id}",
      *     name = "app_product_detail",

@@ -13,6 +13,8 @@ use Pagerfanta\Pagerfanta;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
+ * provides paging information (metadata)
+ *
  * @property array|\Traversable data
  */
 class MetaData

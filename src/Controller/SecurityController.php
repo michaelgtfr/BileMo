@@ -10,6 +10,9 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
+     * allows the client to authenticate, (html format).
+     * can authenticate in json format, [POST] method, line '/ api / login', reply in json format.
+     *
      * @Route("/login", name="app_login")
      * @param AuthenticationUtils $authenticationUtils
      * @return Response

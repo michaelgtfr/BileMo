@@ -15,6 +15,12 @@ class PictureSrc
     private $host;
     private $pictureSrc;
 
+    /**
+     * allows the creation of a link to a product image
+     *
+     * PictureSrc constructor.
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         //PICTURE_SRC configuration is in the .env file

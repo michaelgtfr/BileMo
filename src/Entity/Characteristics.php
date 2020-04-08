@@ -58,6 +58,7 @@ class Characteristics
 
     public function setDesignation(string $designation): self
     {
+        //Protection against the faults XSS
         $this->designation = filter_var($designation, FILTER_SANITIZE_STRING);
 
         return $this;

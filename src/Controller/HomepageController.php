@@ -17,6 +17,8 @@ use Twig\Environment;
 class HomepageController
 {
     /**
+     * API home page
+     *
      * @Route("/", name="app_homepage")
      *
      * @param Request $request

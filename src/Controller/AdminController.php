@@ -16,6 +16,9 @@ use Twig\Environment;
 class AdminController
 {
     /**
+     * client administration page, allows recovery of the token (page in html format).
+     * the request can be made in json in POST format, link '/ api / login'
+     *
      * @Route( "admin/{username}&{token}", name="app_admin")
      * @param $username
      * @param $token

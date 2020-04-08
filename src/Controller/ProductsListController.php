@@ -22,6 +22,8 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 class ProductsListController
 {
     /**
+     * allows the customer to retrieve the list of products
+     *
      * @Rest\Get(
      *     path = "/api/products",
      *     name = "app_products_list",

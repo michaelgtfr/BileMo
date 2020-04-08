@@ -22,6 +22,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class UserDetailController
 {
     /**
+     * allows the customer to retrieve the detail of one of its user
+     *
      * @Rest\Get(
      *     path = "api/user/{id}",
      *     name = "app_user_detail",

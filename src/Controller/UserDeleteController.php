@@ -20,6 +20,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class UserDeleteController
 {
     /**
+     * allows client to delete one of it's user
+     *
      * @Rest\Delete(
      *     path = "api/delete/{id}",
      *     name = "app_user_delete",

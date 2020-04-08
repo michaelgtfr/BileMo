@@ -15,6 +15,8 @@ use Lexik\Bundle\JWTAuthenticationBundle\Response\JWTAuthenticationFailureRespon
 class AuthenticationFailureListener
 {
     /**
+     * authentication failure, custom error 401.
+     *
      * @param AuthenticationFailureEvent $event
      */
     public function onAuthenticationFailureResponse(AuthenticationFailureEvent $event)

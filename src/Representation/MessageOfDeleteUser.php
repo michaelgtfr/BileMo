@@ -12,6 +12,12 @@ namespace App\Representation;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation as Serializer;
 
+/**
+ * allows display of user delete and a success message
+ *
+ * Class MessageOfDeleteUser
+ * @package App\Representation
+ */
 class MessageOfDeleteUser
 {
     /**
@@ -26,6 +32,10 @@ class MessageOfDeleteUser
     public $dataDeleted;
 
 
+    /**
+     * MessageOfDeleteUser constructor.
+     * @param $dataDeleted
+     */
     public function __construct($dataDeleted)
     {
         $this->dataDeleted [] = $dataDeleted;

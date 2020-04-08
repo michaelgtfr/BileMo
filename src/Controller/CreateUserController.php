@@ -24,6 +24,8 @@ use Swagger\Annotations as SWG;
 class CreateUserController
 {
     /**
+     * allows the creation of a user by the client.
+     *
      * @Rest\Post(
      *    path = "api/user",
      *    name = "app_user_create"

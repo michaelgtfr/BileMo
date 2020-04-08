@@ -63,6 +63,16 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers", "deleteUser"})
  * )
  *
+ * @Hateoas\Relation(
+ *      "delete a user",
+ *      href = @Hateoas\Route(
+ *          "app_user_delete",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers", "deleteUser"})
+ * )
+ *
  */
 class User
 {
@@ -152,6 +162,7 @@ class User
 
     public function setCountry(string $country): self
     {
+        //Protection against the faults XSS
         $this->country = filter_var($country, FILTER_SANITIZE_STRING);
 
         return $this;

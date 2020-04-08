@@ -15,6 +15,14 @@ use Pagerfanta\Pagerfanta;
 
 abstract class PaginateData extends ServiceEntityRepository
 {
+    /**
+     * allows paging information send
+     *
+     * @param QueryBuilder $qb
+     * @param int $limit
+     * @param int $offset
+     * @return Pagerfanta
+     */
     public function paginate(QueryBuilder $qb, $limit = 20, $offset = 0)
     {
         if (0 == $limit) {

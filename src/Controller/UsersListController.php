@@ -22,6 +22,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class UsersListController
 {
     /**
+     * allows the client to retrieve the list of these users
+     *
      * @Rest\Get(
      *     path = "/api/users",
      *     name = "app_users_list",
