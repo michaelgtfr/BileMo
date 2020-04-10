@@ -255,6 +255,9 @@
     "phpdocumentor/type-resolver": {
         "version": "1.0.1"
     },
+    "predis/predis": {
+        "version": "v1.1.1"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -283,6 +286,18 @@
         },
         "files": [
             "./config/packages/sensio_framework_extra.yaml"
+        ]
+    },
+    "snc/redis-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "85bbdb3d2db531e20874de29bab0587f93604fa8"
+        },
+        "files": [
+            "./config/packages/snc_redis.yaml"
         ]
     },
     "swiftmailer/swiftmailer": {
@@ -529,6 +544,9 @@
             "./templates/base.html.twig"
         ]
     },
+    "symfony/twig-pack": {
+        "version": "v1.0.0"
+    },
     "symfony/validator": {
         "version": "4.3",
         "recipe": {
@@ -559,6 +577,9 @@
     },
     "symfony/yaml": {
         "version": "v4.4.4"
+    },
+    "twig/extra-bundle": {
+        "version": "v3.0.3"
     },
     "twig/twig": {
         "version": "v3.0.3"
