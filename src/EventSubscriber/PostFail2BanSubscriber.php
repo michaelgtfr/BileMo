@@ -48,7 +48,6 @@ class PostFail2BanSubscriber implements EventSubscriberInterface
     }
 
     /**
-     * The parameters type is "GetResponseEvent" before Symfony 5.
      * @param RequestEvent $event
      */
     public function checkLoginBan(RequestEvent $event): void

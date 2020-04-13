@@ -61,9 +61,8 @@ class UserDeleteController
 
         $em->remove($user);
         $em->flush();
-
+        
         return new MessageOfDeleteUser($user);
-
     }
 
 }

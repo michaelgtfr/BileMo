@@ -70,7 +70,7 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *          parameters = { "id" = "expr(object.getId())" },
  *          absolute = true
  *      ),
- *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers", "deleteUser"})
+ *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers"})
  * )
  *
  */
@@ -83,7 +83,6 @@ class User
      * @Assert\Type("integer")
      * @Serializer\Groups({"listUsers", "detailUser"})
      * @Serializer\Since("1.0")
-     * @Assert\Type("int")
      */
     protected $id;
 

@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9fc8061-4750-4215-8ed0-7da02001ab53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Resources/doc/redis.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/doc/useOfAPI.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/.env.local.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/nelmio_api_doc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/nelmio_api_doc.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserDeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserDeleteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +40,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.env.local.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="64">
+                <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -48,10 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/css/homepage.css" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/templates/security/login.html.twig" />
-        <option value="$PROJECT_DIR$/public/css/login.css" />
         <option value="$PROJECT_DIR$/public/css/admin.css" />
         <option value="$PROJECT_DIR$/templates/security/admin.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/ClientRepository.php" />
@@ -65,18 +72,15 @@
         <option value="$PROJECT_DIR$/src/Controller/ProductsListController.php" />
         <option value="$PROJECT_DIR$/src/Controller/CreateUserController.php" />
         <option value="$PROJECT_DIR$/src/Controller/SecurityController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/UserDeleteController.php" />
         <option value="$PROJECT_DIR$/src/Controller/UserDetailController.php" />
         <option value="$PROJECT_DIR$/src/Controller/UsersListController.php" />
         <option value="$PROJECT_DIR$/src/Service/PaginateData.php" />
         <option value="$PROJECT_DIR$/src/Service/PictureSrc.php" />
-        <option value="$PROJECT_DIR$/src/Representation/MessageOfDeleteUser.php" />
         <option value="$PROJECT_DIR$/src/Representation/Products.php" />
         <option value="$PROJECT_DIR$/src/Representation/Users.php" />
         <option value="$PROJECT_DIR$/src/Representation/MetaData.php" />
         <option value="$PROJECT_DIR$/src/Exception/NoFoundAppException.php" />
         <option value="$PROJECT_DIR$/templates/homepage.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/public/bundles/nelmioapidoc/style.css" />
         <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" />
@@ -91,14 +95,21 @@
         <option value="$PROJECT_DIR$/src/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/src/EventSubscriber/Fail2BanSubscriber.php" />
         <option value="$PROJECT_DIR$/config/packages/snc_redis.yaml" />
-        <option value="$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php" />
-        <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/src/Controller/HomepageController.php" />
-        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php" />
         <option value="$PROJECT_DIR$/config/packages/nelmio_api_doc.yaml" />
+        <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
         <option value="$PROJECT_DIR$/.env.local.php" />
+        <option value="$PROJECT_DIR$/Resources/doc/redis.rst" />
+        <option value="$PROJECT_DIR$/Resources/doc/redis.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/src/Representation/MessageOfDeleteUser.php" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Controller/UserDeleteController.php" />
+        <option value="$PROJECT_DIR$/Resources/doc/useOfAPI.md" />
       </list>
     </option>
   </component>
@@ -243,8 +254,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1099" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -252,6 +263,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,7 +291,13 @@
             <path>
               <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="bilemo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
@@ -289,7 +307,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,12 +423,21 @@
       <workItem from="1586414144749" duration="5015000" />
       <workItem from="1586487592985" duration="16465000" />
       <workItem from="1586512720812" duration="14318000" />
-      <workItem from="1586531022727" duration="108000" />
+      <workItem from="1586531022727" duration="1895000" />
+      <workItem from="1586588030440" duration="791000" />
+      <workItem from="1586595264280" duration="774000" />
+      <workItem from="1586620585621" duration="939000" />
+      <workItem from="1586637554722" duration="337000" />
+      <workItem from="1586681433617" duration="5362000" />
+      <workItem from="1586698503435" duration="3072000" />
+      <workItem from="1586707680411" duration="1439000" />
+      <workItem from="1586715727475" duration="601000" />
+      <workItem from="1586758371252" duration="8765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="425269000" />
+    <option name="totallyTimeSpent" value="449136000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -427,11 +453,11 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28389263" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13691275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -449,11 +475,11 @@
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" weight="0.3295302" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29731545" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13691275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -462,7 +488,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932975" weight="0.32719547" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932975" weight="0.3243626" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.32719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -536,153 +562,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle/Event/AuthenticationFailureEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventListener/AuthenticationFailureListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#120#194#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle/Response/JWTAuthenticationFailureResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/fos_rest.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/snc_redis.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventSubscriber/Fail2BanSubscriber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="e#122#149#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="953">
-          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
-          <folding>
-            <element signature="e#122#205#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7115" column="14" lean-forward="true" selection-start-line="7115" selection-start-column="14" selection-end-line="7115" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/security-guard/AbstractGuardAuthenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="58" lean-forward="true" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/security-guard/PasswordAuthenticatedInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/Security.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/apache-pack/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle/Security/Guard/JWTTokenAuthenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#71#140#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes/dev/framework.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -756,29 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#23#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -793,10 +649,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+    <entry file="file://$PROJECT_DIR$/config/routes/nelmio_api_doc.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="1037">
+          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+          <folding>
+            <element signature="e#122#205#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventSubscriber/Fail2BanSubscriber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="e#122#149#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/swiftmailer.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/nelmio_api_doc.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <folding>
+            <element signature="e#23#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/snc_redis.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -807,20 +726,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes/nelmio_api_doc.yaml">
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/nelmio_api_doc.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/prod/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/doc/redis.md">
+      <provider editor-type-id="restructured-text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="425">
+            <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/.env.local.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.env.local.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="272">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/gesdinet_jwt_refresh_token.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/UserDetailController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductDetailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductsListController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CreateUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Representation/MessageOfDeleteUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+          <folding>
+            <element signature="e#121#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/doc/useOfAPI.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="408">
+            <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/UserDeleteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="e#116#136#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="64">
+            <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
