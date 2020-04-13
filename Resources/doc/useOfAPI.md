@@ -1,10 +1,10 @@
-#Use Of API:
+# Use Of API:
 
 To be able to use the API, you must have a Client account given by the administrator,
 only the home page, the connection pages, and the documentation pages are accessible without connection.
 
 
-##Homepage ('/')
+## Homepage ('/')
 
 Home page (html) accessible without connection, it contains a welcome message,
 brief presentation of the site and the links to the connection page (html) and the documentation page (html).
@@ -24,7 +24,7 @@ to inform you about the different API functionalities.
 **Send :** (status 200)
 
 
-##Connection page html ('/login')
+## Connection page html ('/login')
 
 Allows a client to connect to the API via a graphical interface.
 
@@ -39,7 +39,7 @@ Allows a client to connect to the API via a graphical interface.
 _expiration: 2 hours_
 
 
-##Connection Json ( 'api/login', method = ['POST'] )
+## Connection Json ( 'api/login', method = ['POST'] )
 
 Allows a client to connect to the API via your website or API platform (ex: Postman)
 
@@ -114,7 +114,7 @@ Allows to retrieve the detail of one of its users.
 `- Links usable in relation to the user`  
 `- Date of request` 
 
-##Creating a user ( 'api/user, method= ['POST'] )
+## Creating a user ( 'api/user, method= ['POST'] )
 
 Allows the creation of a user.
 

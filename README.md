@@ -1,8 +1,8 @@
-#BileMo:
+# BileMo:
 
-##Specifications:
+## Specifications:
 
-###Context:
+### Context:
 
 BileMo is a company offering a wide selection of high-end mobile phones.
 
@@ -12,7 +12,7 @@ platforms that want access to the catalog via an API (Application Programming In
 It is therefore sales exclusively in B2B (business to business).
 
 
-###Customer needs
+### Customer needs
 
 The first customer has finally signed a partnership contract with BileMo! It’s the fight to respond to
 needs of this first client who will allow to set up all the APIs and test them right away.
@@ -32,18 +32,18 @@ After a dense meeting with the client, a number of information was identified. I
 
 Only referenced customers can access the APIs. API clients must be authenticated via OAuth or JWT.
 
-###Data presentation
+### Data presentation
 
 The first partner of BileMo is very demanding:
 it requires that you expose your data following the rules of levels 1, 2 and 3 of the Richardson model.
 He asked that you serve the data in JSON. If possible, the client wishes the responses to be brought into
 cache in order to optimize the performance of requests to the API.
  
-##Installation: 
+## Installation: 
 
-###Prerequisites:
+### Prerequisites:
 
-####Download libraries via composer
+#### Download libraries via composer
 
 Go to the root folder of the site. 
 In the root folder right click the mouse and then press git bash (or equivalent software). 
@@ -65,7 +65,7 @@ in the **Resources/doc/** folder.
 -Have its ID on its hosting (host, password, Identifying).  
 -Have installed an FTP on his computer.  
 
-###Site installation on a host
+### Site installation on a host
 
 (Example with FileZilla but all FTP works on the same principle)
 

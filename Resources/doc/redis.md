@@ -1,15 +1,15 @@
-#Redis server
+# Redis server
 
-##Redis installation on your pc (local use):
+## Redis installation on your pc (local use):
 
 ### official link 
 https://redis.io/
 
-###Under Windows
+### Under Windows
 You can follow this page which presents its installation. (link French) 
 https://www.supinfo.com/articles/single/8843-redis-installation-windows
 
-###Under Linux (Debian):
+### Under Linux (Debian):
 You can follow this page which presents its installation. (link anglish)
 https://tecadmin.net/install-redis-on-debian/
 
