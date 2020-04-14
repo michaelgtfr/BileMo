@@ -2,7 +2,7 @@
 
 ## Redis installation on your pc (local use):
 
-### official link 
+### Official link 
 https://redis.io/
 
 ### Under Windows

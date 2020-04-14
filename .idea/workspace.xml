@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9fc8061-4750-4215-8ed0-7da02001ab53" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/doc/redis.md" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/doc/redis.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/doc/useOfAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/doc/useOfAPI.md" afterDir="false" />
@@ -30,37 +31,13 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Resources/doc/useOfAPI.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="353">
-                <caret line="133" column="56" lean-forward="true" selection-start-line="133" selection-start-column="56" selection-end-line="133" selection-end-column="56" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="68">
-                <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/doc/redis.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="272">
-                <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <first_editor relative-caret-position="423">
+                <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
               </first_editor>
               <second_editor />
             </state>
@@ -123,9 +100,9 @@
         <option value="$PROJECT_DIR$/src/Representation/MessageOfDeleteUser.php" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Controller/UserDeleteController.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Resources/doc/redis.md" />
         <option value="$PROJECT_DIR$/Resources/doc/useOfAPI.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -289,39 +266,6 @@
             </path>
             <path>
               <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bilemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
@@ -453,12 +397,13 @@
       <workItem from="1586698503435" duration="3072000" />
       <workItem from="1586707680411" duration="1439000" />
       <workItem from="1586715727475" duration="601000" />
-      <workItem from="1586758371252" duration="9460000" />
+      <workItem from="1586758371252" duration="10039000" />
+      <workItem from="1586793768898" duration="1563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="449831000" />
+    <option name="totallyTimeSpent" value="451973000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -474,7 +419,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13691275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13892618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -759,9 +704,7 @@
     <entry file="file://$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/.env.local.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/.env.local.php" />
     <entry file="file://$PROJECT_DIR$/.env.local.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -784,11 +727,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/UserDetailController.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProductDetailController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-464" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ProductsListController.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -827,18 +765,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/doc/redis.md">
-      <provider editor-type-id="restructured-text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="272">
@@ -847,12 +774,28 @@
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductDetailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/doc/useOfAPI.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="353">
-            <caret line="133" column="56" lean-forward="true" selection-start-line="133" selection-start-column="56" selection-end-line="133" selection-end-column="56" />
+          <first_editor relative-caret-position="576">
+            <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="423">
+            <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
           </first_editor>
           <second_editor />
         </state>

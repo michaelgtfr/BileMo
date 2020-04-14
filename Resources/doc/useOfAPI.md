@@ -36,7 +36,7 @@ Allows a client to connect to the API via a graphical interface.
 `- Username`   
 `- Token` 
 
-_expiration: 2 hours_
+_expiration: 1 hours_
 
 
 ## Connection Json ( 'api/login', method = ['POST'] )
@@ -75,7 +75,7 @@ Allows retrieving the list of products. data recovered in Json.
 **Send :** (status 200)  
 `- List of products`  
 `- Customer data`  
-`- Paging metadata`
+`- Paging metadata`  
 `- Link usable in relation to Products`
 
 
@@ -98,7 +98,7 @@ Allows to retrieve the list of its users.
 **Send :** (status 200)  
 `- List of its users`  
 `- Customer data`  
-`- Paging metadata`
+`- Paging metadata`  
 `- Link usable in relation to users`
 
 
@@ -118,7 +118,7 @@ Allows to retrieve the detail of one of its users.
 
 Allows the creation of a user.
 
-Required for creation (Json format):  
+**Required for creation** (Json format):  
 `- name (string)`  
 `- firstname (string)`  
 `- country (string)`  
@@ -131,7 +131,7 @@ Required for creation (Json format):
 `- Link usable in relation to users`  
 
 
-## Deleted user ( 'api/delete/{id}, method= ['Delete'] )
+## Deleted user ( 'api/delete/{id}, method= ['DELETE'] )
 
 Allows deletion of one of its users.
 

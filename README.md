@@ -1,8 +1,8 @@
-# BileMo:
+# BileMo
 
-## Specifications:
+## Specifications
 
-### Context:
+### Context
 
 BileMo is a company offering a wide selection of high-end mobile phones.
 
@@ -11,15 +11,12 @@ BileMo's business model is not to sell its products directly on the website, but
 platforms that want access to the catalog via an API (Application Programming Interface).
 It is therefore sales exclusively in B2B (business to business).
 
-
 ### Customer needs
 
 The first customer has finally signed a partnership contract with BileMo! It’s the fight to respond to
 needs of this first client who will allow to set up all the APIs and test them right away.
 
 After a dense meeting with the client, a number of information was identified. It must be possible to:
-
-
 
     consult the list of BileMo products;
     view the details of a BileMo product;
@@ -28,8 +25,6 @@ After a dense meeting with the client, a number of information was identified. I
     add a new user linked to a client;
     delete a user added by a client.
     
-
-
 Only referenced customers can access the APIs. API clients must be authenticated via OAuth or JWT.
 
 ### Data presentation
@@ -39,9 +34,9 @@ it requires that you expose your data following the rules of levels 1, 2 and 3 o
 He asked that you serve the data in JSON. If possible, the client wishes the responses to be brought into
 cache in order to optimize the performance of requests to the API.
  
-## Installation: 
+## Installation 
 
-### Prerequisites:
+### Prerequisites
 
 #### Download libraries via composer
 
@@ -58,7 +53,7 @@ and allows automatic deletion of cached data.
 If you do not want or cannot use the Redis server, read the **_redis.md_** documentation
 in the **Resources/doc/** folder.
 
-#### set up in a host
+#### Set up in a host
 
 -Offer accommodation on a hosting.  
 -Have a domain name that will be the address on which your site will be accessible.  
@@ -97,14 +92,13 @@ tables. On your machine, go to your local phpMyAdmin. Use it to export all your 
 on your hard disk that will contain your tables. Then go to the phpMyAdmin address of your host. Once there, use the 
 Import feature to import the. sql file that is on your hard disk. Your tables are now loaded on the host's MySQL server.  
  
-#### website configuration
+#### Website configuration
  
 Do not forget to modify the configuration in the '.env.local.php' file.  
 On a web host, modify the access path to the public file for the domain on the administration page.
     
-   __Site installation Complete__
-   
-   
+   **Site installation Complete**
+     
 ### Use of API
 
 To use the API, you can go to the documentation via the API, link `/api/doc` (html) or `/api/doc.json` (json) 
