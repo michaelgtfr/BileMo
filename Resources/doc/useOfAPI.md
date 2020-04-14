@@ -1,28 +1,24 @@
-# Use Of API:
+# Use Of API
 
 To be able to use the API, you must have a Client account given by the administrator,
 only the home page, the connection pages, and the documentation pages are accessible without connection.
-
 
 ## Homepage ('/')
 
 Home page (html) accessible without connection, it contains a welcome message,
 brief presentation of the site and the links to the connection page (html) and the documentation page (html).
 
-
 ## Documentation html ('api / doc')
 
 Allows via a graphical interface without connection to inform about the different functionality of the API, 
 it also allows to use the API via this interface (with connection).
 
-
-## Documentation ('api/doc.json', method= ['GET'] )
+## Documentation ('api/doc.json', method= \['GET'] )
 
 Allows via an API platform or your website, in Json format without connection, 
 to inform you about the different API functionalities.
 
 **Send :** (status 200)
-
 
 ## Connection page html ('/login')
 
@@ -38,8 +34,7 @@ Allows a client to connect to the API via a graphical interface.
 
 _expiration: 1 hours_
 
-
-## Connection Json ( 'api/login', method = ['POST'] )
+## Connection Json ( 'api/login', method = \['POST'] )
 
 Allows a client to connect to the API via your website or API platform (ex: Postman)
 
@@ -53,8 +48,7 @@ Allows a client to connect to the API via your website or API platform (ex: Post
 
 _expiration: 1 hours_
 
-
-## Refresh token ( 'api/token/refresh', method= ['POST'])
+## Refresh token ( 'api/token/refresh', method= \['POST'])
 
 allows a client to use the refresh token to update their authentication, this saves the system time for authentication.
 
@@ -67,8 +61,7 @@ allows a client to use the refresh token to update their authentication, this sa
 
 _expiration: 2 hours_
 
-
-## Products list ( 'api/products', method= ['GET'] )
+## Products list ( 'api/products', method= \['GET'] )
 
 Allows retrieving the list of products. data recovered in Json.
 
@@ -78,8 +71,7 @@ Allows retrieving the list of products. data recovered in Json.
 `- Paging metadata`  
 `- Link usable in relation to Products`
 
-
-## Product detail ( 'api/product/{id}, method= ['GET'] )
+## Product detail ( 'api/product/{id}, method= \['GET'] )
 
 Allows to retrieve the details of a product.
 
@@ -91,7 +83,7 @@ Allows to retrieve the details of a product.
 `- Links usable in relation to the products`  
 `- Date of request`  
 
-## Users list ( 'api/users', method= ['GET'] )
+## Users list ( 'api/users', method= \['GET'] )
 
 Allows to retrieve the list of its users.
 
@@ -101,8 +93,7 @@ Allows to retrieve the list of its users.
 `- Paging metadata`  
 `- Link usable in relation to users`
 
-
-## User detail ( 'api/user/{id}, method= ['GET'] )
+## User detail ( 'api/user/{id}, method= \['GET'] )
 
 Allows to retrieve the detail of one of its users.
 
@@ -114,7 +105,7 @@ Allows to retrieve the detail of one of its users.
 `- Links usable in relation to the user`  
 `- Date of request` 
 
-## Creating a user ( 'api/user, method= ['POST'] )
+## Creating a user ( 'api/user, method= \['POST'] )
 
 Allows the creation of a user.
 
@@ -130,8 +121,7 @@ Allows the creation of a user.
 `- Customer data`  
 `- Link usable in relation to users`  
 
-
-## Deleted user ( 'api/delete/{id}, method= ['DELETE'] )
+## Deleted user ( 'api/delete/{id}, method= \['DELETE'] )
 
 Allows deletion of one of its users.
 
