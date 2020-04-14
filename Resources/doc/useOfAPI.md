@@ -3,7 +3,7 @@
 To be able to use the API, you must have a Client account given by the administrator,
 only the home page, the connection pages, and the documentation pages are accessible without connection.
 
-##Headers
+## Headers
 
 For any request on the API, please put in your HTTP header the form you want to receive 
 the information and the desired version, example

@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9fc8061-4750-4215-8ed0-7da02001ab53" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mickd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mickd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/doc/useOfAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/doc/useOfAPI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CreateUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CreateUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomepageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductDetailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductsListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductsListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserDeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserDeleteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserDetailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsersListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Characteristics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Characteristics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pictures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pictures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventListener/AuthenticationFailureListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventListener/AuthenticationFailureListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/Fail2BanSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/Fail2BanSubscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/PostFail2BanSubscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exception/NoFoundAppException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exception/NoFoundAppException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Representation/MessageOfDeleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Representation/MessageOfDeleteUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Representation/MetaData.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Representation/MetaData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Representation/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Representation/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Representation/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Representation/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Serializer/Listener/ProductListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serializer/Listener/ProductListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/PaginateData.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PaginateData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/PictureSrc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PictureSrc.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/security/admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Resources/doc/useOfAPI.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="85">
+                <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -280,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,7 +289,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,11 +420,12 @@
       <workItem from="1586864920582" duration="1934000" />
       <workItem from="1586877574231" duration="417000" />
       <workItem from="1586883787958" duration="1767000" />
+      <workItem from="1586886197941" duration="131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="469189000" />
+    <option name="totallyTimeSpent" value="469320000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -458,7 +441,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14697987" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14899328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -621,6 +604,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/doc/redis.md">
+      <provider editor-type-id="restructured-text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="238">
@@ -629,7 +613,6 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="restructured-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CreateUserController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -965,20 +948,20 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/doc/useOfAPI.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/security/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/doc/useOfAPI.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
