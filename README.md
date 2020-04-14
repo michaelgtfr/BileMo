@@ -1,6 +1,7 @@
 # BileMo
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c9daa88dee3843c592c1cf86f033e617)](https://www.codacy.com/manual/michaelgtfr/BileMo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=michaelgtfr/BileMo&amp;utm_campaign=Badge_Grade)
+<a href="https://codeclimate.com/github/michaelgtfr/BileMo/maintainability"><img src="https://api.codeclimate.com/v1/badges/5294671e55a35252f890/maintainability" /></a>
 
 ## Specifications
 
