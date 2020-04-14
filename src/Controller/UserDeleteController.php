@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 04/04/2020
- * Time: 15:22
  */
 
 namespace App\Controller;
@@ -27,17 +25,14 @@ class UserDeleteController
      *     name = "app_user_delete",
      *     requirements = {"id"="\d+"}
      * )
-     *
      * @Rest\View(
      *     statusCode=202,
      *     serializerGroups={"deleteUser"}
      * )
-     *
      * @SWG\Response(
      *     response=202,
      *     description="Delete a user.",
      * )
-     *
      * @SWG\Tag(name="Users")
      * @SWG\Parameter(
      *  name="Authorization",
@@ -47,7 +42,6 @@ class UserDeleteController
      *  type="string",
      *  description="Bearer token",
      * )
-     *
      * @Security(name="Bearer")
      * @param Request $request
      * @param EntityManagerInterface $em
@@ -64,5 +58,4 @@ class UserDeleteController
         
         return new MessageOfDeleteUser($user);
     }
-
 }

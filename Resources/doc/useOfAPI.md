@@ -3,6 +3,23 @@
 To be able to use the API, you must have a Client account given by the administrator,
 only the home page, the connection pages, and the documentation pages are accessible without connection.
 
+##Headers
+
+For any request on the API, please put in your HTTP header the form you want to receive 
+the information and the desired version, example
+
+`Accept: application/json;version=1.0`  
+
+apart from the connection pages and documentation, 
+you will need to send an authentication code in the HTTP header as follows:
+
+`Authorization: Bearer {code jwt}`  
+
+For any sending of data **(POST method)**, it will be necessary to put a content type json to inform the server 
+of how the information is sent
+
+`Content-Type: application/json`
+
 ## Homepage ('/')
 
 Home page (html) accessible without connection, it contains a welcome message,

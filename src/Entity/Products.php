@@ -1,4 +1,7 @@
 <?php
+/**
+ * User: michaelgt
+ */
 
 namespace App\Entity;
 
@@ -21,7 +24,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"detail"})
  * )
- *
  * @Hateoas\Relation(
  *     "self",
  *     href= @Hateoas\Route(
@@ -30,7 +32,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"list"})
  * )
- *
  * @Hateoas\Relation(
  *     "list of products",
  *     href= @Hateoas\Route(
@@ -39,7 +40,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"detail"})
  * )
- *
  * @Hateoas\Relation(
  *      "detail product",
  *      href = @Hateoas\Route(
@@ -49,7 +49,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"list"})
  * )
- *
  * @Hateoas\Relation(
  *     "authenticated_user",
  *     embedded = @Hateoas\Embedded("expr(service('security.token_storage').getToken().getUser())"),

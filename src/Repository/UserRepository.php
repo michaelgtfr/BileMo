@@ -1,4 +1,7 @@
 <?php
+/**
+ * User: michaelgt
+ */
 
 namespace App\Repository;
 
@@ -19,6 +22,14 @@ class UserRepository extends PaginateData
         parent::__construct($registry, User::class);
     }
 
+    /**
+     * @param $term
+     * @param string $order
+     * @param int $limit
+     * @param int $offset
+     * @param $client
+     * @return \Pagerfanta\Pagerfanta
+     */
     public function searchListByClient($term, $order = 'asc', $limit = 20, $offset = 0, $client)
     {
         $qb = $this->createQueryBuilder('u')
@@ -26,7 +37,6 @@ class UserRepository extends PaginateData
             ->orderBy('u.id', $order)
             ->where('u.client = ?2')
             ->setParameter(2, $client);
-
 
         if ($term) {
             $qb
@@ -37,6 +47,13 @@ class UserRepository extends PaginateData
         return $this->paginate($qb, $limit, $offset);
     }
 
+    /**
+     * @param $id
+     * @param $client
+     * @return mixed
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function detailUserOfClient($id, $client)
     {
         return $this->createQueryBuilder('u')

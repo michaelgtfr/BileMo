@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 10/04/2020
- * Time: 05:50
  */
 
 namespace App\EventSubscriber;
-
 
 use Lexik\Bundle\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
 use Predis\ClientInterface;
@@ -20,10 +17,17 @@ use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Routing\Router;
 use Symfony\Component\Routing\RouterInterface;
 
+/**
+ * provides protection against brute force attacks using the redis cache
+ * check in cache if you can connect
+ *
+ * Class PostFail2BanSubscriber
+ * @package App\EventSubscriber
+ */
 class PostFail2BanSubscriber implements EventSubscriberInterface
 {
     public const MAX_LOGIN_FAILURE_ATTEMPTS = 10;
-    private const PRIORIY = 10;
+    private const PRIORITY = 10;
 
     // @see https://symfony.com/doc/current/reference/configuration/security.html#check-path
     private const LOGIN_ROUTE = 'app_login'; // route page login html
@@ -43,7 +47,7 @@ class PostFail2BanSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            KernelEvents::REQUEST => ['checkLoginBan', self::PRIORIY]
+            KernelEvents::REQUEST => ['checkLoginBan', self::PRIORITY]
         ];
     }
 
@@ -71,9 +75,6 @@ class PostFail2BanSubscriber implements EventSubscriberInterface
     }
 
     public function maxFailureAttempts($ip, $key, RequestEvent $event)
-
-
-
     {
         if ((int) $this->redis->get($key) >= self::MAX_LOGIN_FAILURE_ATTEMPTS) {
             $this->logger->critical(sprintf('IP %s banned due to %d login attempts failures.',
@@ -81,8 +82,8 @@ class PostFail2BanSubscriber implements EventSubscriberInterface
 
             $data = [
                 'status'  => '429 TOO MANY REQUEST',
-                'message' => 'desoler mais vous avez passé la limit de connection',
-                'temps restant' => 'vous pourez réessayer dans '. $this->redis->ttl($key) .' secondes',
+                'message' => 'désolé mais vous avez passé la limit de connexion',
+                'temps restant' => 'vous pourrez réessayer dans '. $this->redis->ttl($key) .' secondes',
             ];
 
             $response = new JWTAuthenticationFailureResponse($data, JsonResponse::HTTP_TOO_MANY_REQUESTS);

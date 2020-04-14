@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * User: michaelgt
+ */
 namespace App\Security;
 
 use App\Entity\Client;
@@ -89,6 +91,8 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
     /**
      * Used to upgrade (rehash) the user's password automatically over time.
+     * @param $credentials
+     * @return string|null
      */
     public function getPassword($credentials): ?string
     {
@@ -100,8 +104,6 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         $token = $this->getToken($this->jwtManager);
         return new RedirectResponse($this->urlGenerator->generate('app_admin',
             [ 'username' => $request->get('email'), 'token' => $token ]));
-
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 
     protected function getLoginUrl()

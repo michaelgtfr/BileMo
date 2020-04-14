@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 04/03/2020
- * Time: 20:29
  */
 
 namespace App\Controller;
-
 
 use App\Entity\Products;
 use App\Exception\NoFoundAppException;
@@ -57,7 +54,7 @@ class ProductsListController
      *     name="limit",
      *     requirements="\d+",
      *     default="15",
-     *     description="Max number of movies per page."
+     *     description="Max number of products per page."
      * )
      * @Rest\QueryParam(
      *     name="offset",
@@ -92,7 +89,7 @@ class ProductsListController
 
         if($pager == null)
         {
-            $message = 'desoler mais il n\'y a pas d\'article';
+            $message = 'Désolé mais il n\'y a pas de produit disponible';
 
             throw new NoFoundAppException($message);
         }

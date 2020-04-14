@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 02/04/2020
- * Time: 10:24
  */
 
 namespace App\EventListener;
-
 
 use Lexik\Bundle\JWTAuthenticationBundle\Event\AuthenticationFailureEvent;
 use Lexik\Bundle\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
@@ -22,8 +19,8 @@ class AuthenticationFailureListener
     public function onAuthenticationFailureResponse(AuthenticationFailureEvent $event)
     {
         $data = [
-            'status'  => '401 Unauthorized',
-            'message' => 'Bad credentials, please verify that your username/password are correctly set',
+            'status'  => '401 Non autorisé',
+            'message' => 'veuillez vérifier que votre nom d\'utilisateur/ mot de passe soit correctement défini',
         ];
 
         $response = new JWTAuthenticationFailureResponse($data);

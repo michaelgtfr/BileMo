@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 23/02/2020
- * Time: 12:13
  */
 
 namespace App\Serializer\Listener;
@@ -15,6 +13,10 @@ use JMS\Serializer\Metadata\StaticPropertyMetadata;
 
 class ProductListener implements EventSubscriberInterface
 {
+    /**
+     * allows to add information after serialization
+     * @return array
+     */
     public static function getSubscribedEvents()
     {
         return [
@@ -30,7 +32,9 @@ class ProductListener implements EventSubscriberInterface
     public static function onPostSerialize(ObjectEvent $event)
     {
         $date = new \Datetime();
-        // Possibilité de modifier le tableau après sérialisation
-        $event->getVisitor()->visitProperty(new StaticPropertyMetadata ('', 'delivered_at', null), $date->format('l jS \of F Y h:i:s A'));
+        // Possibility to modify the table after serialization
+        $event->getVisitor()->visitProperty(new StaticPropertyMetadata (
+            '', 'delivered_at', null), $date->format('l jS \of F Y h:i:s A')
+        );
     }
 }

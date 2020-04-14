@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 10/04/2020
- * Time: 05:44
  */
 
 namespace App\EventSubscriber;
-
 
 use Predis\ClientInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -15,6 +12,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\AuthenticationEvents;
 
+/**
+ * provides protection against brute force attacks using the redis cache
+ * retrieve or create a variable (key/value) in the cache and increments it if an authentication fails.
+ *
+ * Class Fail2BanSubscriber
+ * @package App\EventSubscriber
+ */
 class Fail2BanSubscriber implements EventSubscriberInterface
 {
     public const KEY_PREFIX = 'login_failures_';
@@ -46,12 +50,7 @@ class Fail2BanSubscriber implements EventSubscriberInterface
         return $request;
     }
 
-    /**
-     * Client IP shouldn't be empty but better to test. We don't need the event as we
-     * don't use the username that caused the failure. If you want it, pass the
-     * argument "AuthenticationFailureEvent" to this function like below.
-     */
-    public function onAuthenticationFailure(/*AuthenticationFailureEvent $authenticationFailureEvent*/): void
+    public function onAuthenticationFailure(): void
     {
         $ip = $this->getRequest()->getClientIp();
         if (!$ip) {

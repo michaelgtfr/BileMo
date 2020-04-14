@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 03/04/2020
- * Time: 19:08
  */
 
 namespace App\Controller;
@@ -36,7 +34,7 @@ class CreateUserController
      * )
      *
      * @SWG\Response(
-     *     response=200,
+     *     response=201,
      *     description="Create a new user by the client.",
      *     @SWG\Schema(
      *         type="array",
@@ -69,7 +67,7 @@ class CreateUserController
      *     name="address",
      *     requirements="[a-zA-Z0-9]",
      *     default=null,
-     *     description="Search query to look for articles"
+     *     description="address of user"
      * )
      *
      * @RequestParam(

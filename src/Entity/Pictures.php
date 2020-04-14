@@ -1,4 +1,7 @@
 <?php
+/**
+ * User: michaelgt
+ */
 
 namespace App\Entity;
 
@@ -8,7 +11,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PicturesRepository")
- *
  */
 class Pictures
 {

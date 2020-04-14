@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 24/02/2020
- * Time: 09:21
  */
 
 namespace App\Service;
@@ -28,6 +26,10 @@ class PictureSrc
         $this->host = $request->headers->get('host');
     }
 
+    /**
+     * @param $picture
+     * @return mixed
+     */
     public function pictureSrc($picture)
     {
         foreach ($picture as &$value) {

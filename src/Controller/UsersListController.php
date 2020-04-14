@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 03/04/2020
- * Time: 11:00
  */
 
 namespace App\Controller;
@@ -56,7 +54,7 @@ class UsersListController
      *     name="limit",
      *     requirements="\d+",
      *     default="15",
-     *     description="Max number of movies per page."
+     *     description="Max number of user per page."
      * )
      * @Rest\QueryParam(
      *     name="offset",
@@ -92,7 +90,7 @@ class UsersListController
 
         if($pager == null)
         {
-            $message = 'desoler mais vous n\'avez pas d\'utilisateur enregistrer dans la base de données';
+            $message = 'désolé mais vous n\'avez pas d\'utilisateur enregistré dans la base de données';
 
             throw new NoFoundAppException($message);
         }

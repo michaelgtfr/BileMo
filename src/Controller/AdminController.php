@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 01/04/2020
- * Time: 18:58
  */
 
 namespace App\Controller;
@@ -17,7 +15,7 @@ class AdminController
 {
     /**
      * client administration page, allows recovery of the token (page in html format).
-     * the request can be made in json in POST format, link '/ api / login'
+     * the request can be made in json in POST format, link '/api/login'
      *
      * @Route( "admin/{username}&{token}", name="app_admin")
      * @param $username

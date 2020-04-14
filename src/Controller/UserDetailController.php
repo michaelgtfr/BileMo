@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 03/04/2020
- * Time: 17:31
  */
 
 namespace App\Controller;
-
 
 use App\Entity\User;
 use App\Exception\NoFoundAppException;
@@ -63,7 +60,7 @@ class UserDetailController
             ->detailUserOfClient($request->get('id'), $client->getId());
 
         if ($user == null) {
-            $message = 'Desoler mais l\'utilisateur demandé n\'existe pas';
+            $message = 'Désolé mais l\'utilisateur demandé n\'existe pas';
             throw new NoFoundAppException($message);
         }
 

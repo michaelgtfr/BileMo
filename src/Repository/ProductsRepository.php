@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * User: michaelgt
+ */
 namespace App\Repository;
 
 use App\Entity\Products;
@@ -26,7 +28,6 @@ class ProductsRepository extends PaginateData
             ->orderBy('p.id', $order)
         ;
 
-
         if ($term) {
             $qb
                 ->where('p.id LIKE ?1')
@@ -36,33 +37,4 @@ class ProductsRepository extends PaginateData
 
         return $this->paginate($qb, $limit, $offset);
     }
-
-    // /**
-    //  * @return Products[] Returns an array of Products objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Products
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 06/04/2020
- * Time: 07:23
  */
 
 namespace App\Controller;
-
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,7 +17,6 @@ class HomepageController
      * API home page
      *
      * @Route("/", name="app_homepage")
-     *
      * @param Request $request
      * @param Environment $twig
      * @return Response

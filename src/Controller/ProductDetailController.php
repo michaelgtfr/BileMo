@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 20/02/2020
- * Time: 20:50
  */
 
 namespace App\Controller;
@@ -62,7 +60,7 @@ class ProductDetailController
         ->find($request->get('id'));
 
         if ($product == null) {
-            $message = 'desoler mais l\'article demandé n\'existe pas';
+            $message = 'désolé mais le produit demandé n\'existe pas';
             throw new NoFoundAppException($message);
         }
 

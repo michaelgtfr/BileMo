@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 04/04/2020
- * Time: 19:00
  */
 
 namespace App\Representation;
-
 
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation as Serializer;
@@ -31,7 +28,6 @@ class MessageOfDeleteUser
      */
     public $dataDeleted;
 
-
     /**
      * MessageOfDeleteUser constructor.
      * @param $dataDeleted
@@ -40,7 +36,7 @@ class MessageOfDeleteUser
     {
         $this->dataDeleted [] = $dataDeleted;
 
-        $this->message = "votre utilisateur  été supprimer";
+        $this->message = "votre utilisateur à été supprimé";
     }
 
 }

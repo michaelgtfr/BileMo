@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 03/04/2020
- * Time: 13:00
  */
 
 namespace App\Representation;
-
 
 use Pagerfanta\Pagerfanta;
 use JMS\Serializer\Annotation as Serializer;
@@ -37,7 +34,8 @@ class MetaData
     public function addMeta($name, $value)
     {
         if (isset($this->meta[$name])) {
-            throw new \LogicException(sprintf('This meta already exists. You are trying to override this meta, use the setMeta method instead for the %s meta.', $name));
+            throw new \LogicException(sprintf('This meta already exists. You are trying to override this meta, 
+            use the setMeta method instead for the %s meta.', $name));
         }
 
         $this->setMeta($name, $value);

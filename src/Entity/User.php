@@ -1,4 +1,7 @@
 <?php
+/**
+ * User: michaelgt
+ */
 
 namespace App\Entity;
 
@@ -15,7 +18,6 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *     embedded = @Hateoas\Embedded("expr(service('security.token_storage').getToken().getUser())"),
  *     exclusion = @Hateoas\Exclusion(groups={"listUsers", "detailUser", "deleteUser"})
  * )
- *
  * @Hateoas\Relation(
  *      "self",
  *      href = @Hateoas\Route(
@@ -24,7 +26,6 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"listUsers"})
  * )
- *
  * @Hateoas\Relation(
  *      "detail of user",
  *      href = @Hateoas\Route(
@@ -34,7 +35,6 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"listUsers"})
  * )
- *
  * @Hateoas\Relation(
  *      "self",
  *      href = @Hateoas\Route(
@@ -44,7 +44,6 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"detailUser"})
  * )
- *
  * @Hateoas\Relation(
  *      "list of users",
  *      href = @Hateoas\Route(
@@ -53,7 +52,6 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "deleteUser"})
  * )
- *
  * @Hateoas\Relation(
  *      "create new user",
  *      href = @Hateoas\Route(
@@ -62,7 +60,6 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers", "deleteUser"})
  * )
- *
  * @Hateoas\Relation(
  *      "delete a user",
  *      href = @Hateoas\Route(
@@ -72,7 +69,6 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *      ),
  *     exclusion = @Hateoas\Exclusion(groups={"detailUser", "listUsers"})
  * )
- *
  */
 class User
 {
@@ -80,7 +76,7 @@ class User
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Assert\Type("integer")
+     * @Assert\Type("int")
      * @Serializer\Groups({"listUsers", "detailUser"})
      * @Serializer\Since("1.0")
      */

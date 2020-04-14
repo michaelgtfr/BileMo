@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mickd
+ * User: michaelgt
  * Date: 19/03/2020
- * Time: 11:19
  */
 
 namespace App\Service;

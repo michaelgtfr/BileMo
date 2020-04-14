@@ -1,4 +1,7 @@
 <?php
+/**
+ * User: michaelgt
+ */
 
 namespace App\Entity;
 
@@ -53,6 +56,7 @@ class Client implements UserInterface
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
+     * @Serializer\Since("1.0")
      * @Assert\Type("object")
      */
     private $users;
