@@ -3,3 +3,13 @@ nav
     background-color: #137752;
     font-weight: bold;
 }
+
+footer
+{
+    background-color: black;
+    color: gray;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}

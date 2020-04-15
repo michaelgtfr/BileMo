@@ -7,30 +7,27 @@
 {% endblock %}
 
 {% block body %}
-
     <section class="container-fluid">
         <p class="text-center m-2 display-4"><em>Bonjour et bienvenue sur l'api de BileMo,
-                site de vente de téléphone pour entreprise.</em></p>
+                site de vente de téléphone pour entreprises.</em></p>
         <div class="row">
             <div class="col-sm-6 p-5 row">
-                <p class="col-sm-12 m-3">Pour utiliser l'api vous devez vous munir de votre code d'accés fourni dans votre dossier
-                    et de votre email professionnel. Vous pouvez vous Authentifiez via le lien '/api/login',
-                    methode [POST] avec envoie au format Json de votre "username" (email) et "password" (mot de passe)</p>
+                <p class="col-sm-12 m-3">Pour utiliser l'api vous devez vous munir de votre code d'accès fourni dans votre dossier
+                    et de votre email professionnel. Vous pouvez vous Authentifiez via le lien "/api/login",
+                    méthode [POST], envoyé au format Json de votre "username" (email) et "password" (mot de passe)</p>
 
                 <a class="btn col-sm-6 offset-sm-3 align-self-end" href="{{ path('app_login') }}">Se connecter</a>
             </div>
             <div class="col-sm-6 p-5 row">
-                <p class="col-sm-12 m-3">Acces à la documentation du site, présente le format d'envoie des éléments, la récupération, son status,...
-                    vous pourrez utilisé depuis cette page (Attention token obligatoire pour utiliser les fonctionnalités).</p>
+                <p class="col-sm-12 m-3">Accès à la documentation du site, présente le format d'envoi des éléments, la récupération, son status, ...
+                    vous pourrez utiliser depuis cette page (Attention token obligatoire pour utiliser les fonctionnalités).</p>
 
                 <a class="btn col-sm-6 offset-sm-3 align-self-end" href="http://{{ host }}/api/doc">Documentation</a>
             </div>
         </div>
 
         <p class="text-center align-items-end align-self-end">Depuis cette API vous pouvez sans authentification, regarder la documentation.
-                Avec authentification vous pouvez avoir la liste des produits BileMo , leurs details
-                ainsi que la liste de vos utilisateur, ajouter les utilisateurs dans la base de données ou les supprimer.</p>
+                Avec authentification vous pouvez avoir la liste des produits BileMo , leurs détails
+                ainsi que la liste de vos utilisateurs, ajouter les utilisateurs dans la base de données ou les supprimer.</p>
     </section>
-
-
 {% endblock %}

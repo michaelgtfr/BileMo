@@ -1,4 +1,4 @@
-#LexikJWTAuthenticationBundle
+# LexikJWTAuthenticationBundle
 
 LexikJWT is the service allowing you to authenticate via a token that you will put in the HTTP header (authorization). 
 They will be given to you after you are authenticated (see `Resource/doc/useOfAPI.md` for more information on connection).
