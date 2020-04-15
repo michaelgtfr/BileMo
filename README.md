@@ -56,6 +56,14 @@ and allows automatic deletion of cached data.
 If you do not want or cannot use the Redis server, read the **_redis.md_** documentation
 in the **Resources/doc/** folder.
 
+#### LexikJWTAuthenticationBundle
+
+LexikJWT is the service allowing you to authenticate via a token that you will put in the HTTP header (authorization). 
+They will be given to you after you are authenticated (see `Resource/doc/useOfAPI.md` for more information on connection).
+
+If you install the project you will need to generate your own SSH key. 
+You will have all the information on in the `Resource/doc/lexikJWTAuthentication.md` file.
+
 #### Set up in a host
 
 -Offer accommodation on a hosting.  
