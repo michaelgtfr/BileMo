@@ -76,7 +76,7 @@ class Products
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string")
      * @Serializer\Groups({"detail", "list"})
      * @Serializer\Since("1.0")
      * @Assert\Type("string")
