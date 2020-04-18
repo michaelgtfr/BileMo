@@ -1,13 +1,59 @@
 <?php
+/**
+ * User: michaelgt
+ */
 
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
+use Hateoas\Configuration\Annotation as Hateoas;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductsRepository")
+ *
+ * @Hateoas\Relation(
+ *      "self",
+ *      href = @Hateoas\Route(
+ *          "app_product_detail",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"detail"})
+ * )
+ * @Hateoas\Relation(
+ *     "self",
+ *     href= @Hateoas\Route(
+ *     "app_products_list",
+ *     absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"list"})
+ * )
+ * @Hateoas\Relation(
+ *     "list of products",
+ *     href= @Hateoas\Route(
+ *     "app_products_list",
+ *     absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"detail"})
+ * )
+ * @Hateoas\Relation(
+ *      "detail product",
+ *      href = @Hateoas\Route(
+ *          "app_product_detail",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute = true
+ *      ),
+ *     exclusion = @Hateoas\Exclusion(groups={"list"})
+ * )
+ * @Hateoas\Relation(
+ *     "authenticated_user",
+ *     embedded = @Hateoas\Embedded("expr(service('security.token_storage').getToken().getUser())"),
+ *     exclusion = @Hateoas\Exclusion(groups={"detail", "list"})
+ * )
  */
 class Products
 {
@@ -15,26 +61,41 @@ class Products
      * @ORM\Id()
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
+     * @Serializer\Groups({"detail", "list"})
+     * @Serializer\Since("1.0")
+     * @Assert\Type("int")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Serializer\Groups({"detail", "list"})
+     * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string")
+     * @Serializer\Groups({"detail", "list"})
+     * @Serializer\Since("1.0")
+     * @Assert\Type("string")
      */
     private $content;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Pictures", mappedBy="product", cascade={"persist"})
+     * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
+     * @Assert\Type("object")
      */
     private $pictures;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Characteristics", mappedBy="product", cascade={"persist"})
+     * @Serializer\Groups({"detail"})
+     * @Serializer\Since("1.0")
+     * @Assert\Type("object")
      */
     private $characteristics;
 
@@ -56,7 +117,8 @@ class Products
 
     public function setName(string $name): self
     {
-        $this->name = $name;
+        //Protection against the faults XSS
+        $this->name = filter_var($name, FILTER_SANITIZE_STRING);
 
         return $this;
     }
@@ -68,7 +130,7 @@ class Products
 
     public function setContent(string $content): self
     {
-        $this->content = $content;
+        $this->content = filter_var($content, FILTER_SANITIZE_STRING);
 
         return $this;
     }

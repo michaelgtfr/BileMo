@@ -1,0 +1,62 @@
+nelmio_api_doc:
+  documentation:
+    host: '%env(HOST_NELMIO)%'
+    schemes: [http, https]
+    info:
+      title: BileMo
+      description: Phone in B2B
+      version: 1.0.0
+    securityDefinitions:
+      Bearer:
+        type: apiKey
+        description: 'Value: Bearer {jwt}'
+        name: Authorization
+        in: header
+    security:
+      - Bearer: []
+    paths:
+      /api/login:
+        post:
+          summary: API connection (json)
+          tags:
+            - login
+          parameters:
+            - in: body
+              name: body
+              required: true
+              schema:
+                type: string
+            - in: body
+              name: password
+              required: true
+              schema:
+                type: string
+          produces:
+            - application/json
+          responses:
+            201:
+              description: recovery of authentication token and refresh token
+              schema:
+                type: string
+
+      /api/token/refresh:
+        post:
+          summary: refresh the connection
+          tags:
+            - login
+          parameters:
+            - in: body
+              name: refresh_token
+              required: true
+              schema:
+                type: string
+          produces:
+            - application/json
+          responses:
+            201:
+              description: authentification token
+              schema:
+                type: string
+  areas:
+    default:
+      path_patterns: [ ^/api(?!/token/refresh$) ]

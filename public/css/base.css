@@ -1,0 +1,20 @@
+header
+{
+    background-image: url("../img/background_headers.png");
+    height: 208px;
+}
+
+nav
+{
+    font-weight: bold;
+}
+
+footer
+{
+    background-color: black;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

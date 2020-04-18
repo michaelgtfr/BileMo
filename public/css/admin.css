@@ -1,0 +1,20 @@
+em
+{
+    font-weight: bold;
+}
+
+.card_username
+{
+    width: 30%;
+}
+
+.card_token
+{
+    width: 65%;
+}
+
+footer
+{
+    position: relative;
+    padding: 10px;
+}

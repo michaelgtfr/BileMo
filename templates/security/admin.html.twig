@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section class="container">
+        <div class="row">
+            <h3 class="col-sm-12 text-center my-3"><ins>Mes informations:</ins></h3>
+            <div class="card card_username mr-1">
+                <div class="card-body">
+                    <h5 class="card-title">Username</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Votre email</h6>
+                    <p class="card-text">{{ username }}</p>
+                </div>
+            </div>
+            <div class="card card_token">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Token:</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Clé d'authentification à mettre dans vos en-têtes HTTP</h6>
+                    <p class="card-text text-danger">Bearer {{ token }}</p>
+                </div>
+            </div>
+
+            <div class="api_informations col-sm-12">
+                <h3 class="col-sm-12 text-center my-5"><ins>Utilisation de l'API:</ins></h3>
+                <h4><em>Utilisation du site avec la documentation:</em></h4>
+                <p>Aller sur la <a href="http://{{ host }}/api/doc">Documentation</a> (copier le token d'authentification).
+                De celle-ci vous pouvez vous en servir pour utiliser le site en utilisant le site web.</p>
+
+                <h4><em>Utilisation du site via une plateforme de développement d'api (ex: Postman):</em></h4>
+                <p>Aller sur votre plate-forme, et suivez la documentation pour utiliser les différents services.</p>
+
+                <h4><em>Depuis votre site web :</em></h4>
+                <p>Faite vos appels à l'application (au format Json) et recevez les réponses (en Json).</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
