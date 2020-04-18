@@ -17,6 +17,7 @@ class SecurityController
      * can authenticate in json format, [POST] method, line '/ api / login', reply in json format.
      *
      * @Route("/login", name="app_login",  methods={"GET", "POST"})
+     *
      * @param AuthenticationUtils $authenticationUtils
      * @param Environment $twig
      * @return Response

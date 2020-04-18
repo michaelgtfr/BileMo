@@ -29,7 +29,7 @@ nelmio_api_doc:
             - in: body
               name: password
               required: true
-              schema:
+              schemas:
                 type: string
           produces:
             - application/json

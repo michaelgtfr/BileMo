@@ -22,7 +22,7 @@ explaining how to install the extension (link english).
 #### Windows
 <https://tecadmin.net/install-openssl-on-windows/>
 
-### Generate the SSH keys:
+### Generate the SSH keys
 
 In your terminal
 
