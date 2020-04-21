@@ -25,19 +25,24 @@ nelmio_api_doc:
               name: body
               required: true
               schema:
-                type: string
-            - in: body
-              name: password
-              required: true
-              schemas:
-                type: string
+                type: object
+                properties:
+                  username:
+                    type: string
+                  password:
+                    type: string
           produces:
             - application/json
           responses:
             201:
               description: recovery of authentication token and refresh token
               schema:
-                type: string
+                type: object
+                properties:
+                  token:
+                    type: string
+                  refresh_token:
+                    type: string
 
       /api/token/refresh:
         post:
@@ -46,17 +51,25 @@ nelmio_api_doc:
             - login
           parameters:
             - in: body
-              name: refresh_token
+              name: body
               required: true
               schema:
-                type: string
+                type: object
+                properties:
+                  refresh_token:
+                    type: string
           produces:
             - application/json
           responses:
             201:
-              description: authentification token
+              description: authentification token and refresh token
               schema:
-                type: string
+                type: object
+                properties:
+                  token:
+                    type: string
+                  refresh_token:
+                    type: string
   areas:
     default:
       path_patterns: [ ^/api(?!/token/refresh$) ]
